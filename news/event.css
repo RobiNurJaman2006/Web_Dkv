@@ -1,0 +1,235 @@
+:root {
+    --primary-teal: #005a5a;
+    --accent-orange: #e67e22;
+    --accent-yellow: #f1c40f;
+    --light-bg: #f4f4f4;
+    --text-gray: #666;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px; /* Lebar mobile sesuai gambar */
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent-orange);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Hero Section */
+.hero-event {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://via.placeholder.com/800x600');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.share-icons {
+    position: absolute;
+    top: 20px;
+    font-size: 0.8rem;
+    display: flex;
+    gap: 10px;
+}
+
+.hero-event h1 {
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+.yellow-text {
+    color: var(--accent-yellow);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Filters */
+.filters {
+    margin-top: -30px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    z-index: 10;
+    position: relative;
+}
+
+.filters input, .filters select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #888;
+}
+
+/* Event List */
+.section-title {
+    text-align: center;
+    color: var(--primary-teal);
+    margin: 40px 0 20px;
+    font-size: 1.5rem;
+}
+
+.view-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.view-toggle button {
+    padding: 10px 30px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+}
+
+.view-toggle button.active {
+    background: #008cff;
+    color: white;
+}
+
+/* Event Card */
+.event-card {
+    border: 1px solid #eee;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+}
+
+.date-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: white;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.date-badge .day {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.date-badge .month {
+    font-size: 0.7rem;
+    color: var(--text-gray);
+}
+
+.event-info {
+    padding: 20px;
+}
+
+.event-info h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.event-info p {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    margin: 5px 0;
+}
+
+.tag {
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background: #efefef;
+    padding: 40px 0 0;
+    margin-top: 50px;
+}
+
+.footer-top-logos {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.footer-address h4 {
+    color: var(--primary-teal);
+    margin-bottom: 15px;
+}
+
+.footer-address p {
+    font-size: 0.9rem;
+    color: var(--primary-teal);
+    margin-bottom: 5px;
+}
+
+.footer-links {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--primary-teal);
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    font-size: 1.5rem;
+    color: #008080;
+    padding-bottom: 30px;
+}
+
+.copyright {
+    background: #004d4d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.75rem;
+}

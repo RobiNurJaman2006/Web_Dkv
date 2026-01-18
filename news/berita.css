@@ -1,73 +1,155 @@
+/* Reset & General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
-    background-color: #ffffff;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
 }
 
-/* HEADER */
-.news-header {
-    position: relative;
-    height: 320px;
-    background: url("background.jpg") center/cover no-repeat;
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.header-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.88);
+/* Header */
+header {
+    background: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
 }
 
-.header-content {
-    position: relative;
-    padding: 50px 20px;
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header-content h1 {
-    font-size: 46px;
+.menu-icon {
+    color: #e67e22; /* Warna oranye menu */
     font-weight: bold;
-    color: #0b4c5f;
+    cursor: pointer;
+    text-transform: uppercase;
 }
 
-.header-content p {
-    font-size: 26px;
-    font-weight: 600;
-    color: #f39c12;
-    margin-top: 5px;
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('WhatsApp\ Image\ 2026-01-18\ at\ 16.11.51.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
 }
 
-/* NEWS SECTION */
-.news-section {
-    padding: 20px;
+.hero h1 {
+    font-size: 3rem;
+    color: #006666; /* Teal color */
+    margin-bottom: 5px;
 }
 
-/* CARD */
-.news-card {
-    background: #f3f3f3;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.hero .subtitle {
+    color: #e67e22;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
-/* IMAGE */
-.news-image img {
+/* News Cards */
+.news-grid {
+    margin-top: 40px;
+}
+
+.card {
+    background: #fff;
+    margin-bottom: 40px;
+}
+
+.card img {
     width: 100%;
+    border-radius: 15px; /* Rounded corners like in screenshot */
     display: block;
 }
 
-/* TEXT */
-.news-text {
-    padding: 18px;
+.card-content {
+    padding: 20px 0;
 }
 
-.news-text h2 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #0b4c5f;
-    line-height: 1.4;
+.card h2 {
+    font-size: 1.3rem;
+    color: #006666;
+    line-height: 1.3;
+    margin-bottom: 10px;
     text-transform: uppercase;
+}
+
+.card .date {
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.card .excerpt {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    color: #e67e22;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Buttons & Archives */
+.load-more-container {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.btn-load {
+    background: #a0a0a0;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.archives {
+    margin-bottom: 50px;
+}
+
+.archives h3 {
+    color: #006666;
+    margin-bottom: 10px;
+}
+
+.archives select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background: #e0e0e0;
+    padding: 40px 0;
+    text-align: left;
+}
+
+.footer-logos {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-info {
+    font-size: 0.85rem;
+    color: #004444;
 }
