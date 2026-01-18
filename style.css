@@ -1,56 +1,80 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background: #f9f9f9;
+  background: #ffffff;
+}
+/* ===== SEARCH ===== */
+.search-wrapper {
+  position: relative;
 }
 
-/* NAVBAR */
-header {
+.search-icon {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #0b4f4a;
+}
+
+.search-box {
+  position: absolute;
+  top: 40px;
+  right: 0;
+
+  background: #fff;
+  padding: 15px;
+  width: 260px;
+
+  border-top: 4px solid #ff7a00;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  display: none;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-}
 
-.navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 16px 60px;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-  transition: 0.3s;
+  justify-content: space-between;
+
+  padding: 16px 64px;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(12px);
 }
 
-.navbar.scrolled {
-  background: rgba(255, 255, 255, 0.9);
+.logo img {
+  height: 64px;
 }
 
-.logo {
-  font-weight: bold;
-  color: #004d40;
-  font-size: 20px;
-}
-
+/* MENU */
 .menu {
-  list-style: none;
   display: flex;
-  gap: 30px;
-}
-
-.menu li {
-  position: relative;
+  list-style: none;
+  gap: 32px;
 }
 
 .menu a {
   text-decoration: none;
-  color: #004d40;
   font-weight: 600;
+  color: #0b4f4a;
 }
 
 .menu a.active {
@@ -58,24 +82,29 @@ header {
 }
 
 /* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
 .dropdown-menu {
   position: absolute;
   top: 120%;
   left: 0;
-  background: white;
-  min-width: 220px;
-  border-radius: 8px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  background: #fff;
+  min-width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   display: none;
 }
 
-.dropdown-menu li a {
-  padding: 12px 20px;
+.dropdown-menu a {
   display: block;
+  padding: 12px 20px;
+  color: #333;
 }
 
-.dropdown-menu li a:hover {
-  background: #f2f2f2;
+.dropdown-menu a:hover {
+  background: #f5f5f5;
   color: #ff7a00;
 }
 
@@ -83,7 +112,60 @@ header {
   display: block;
 }
 
-/* CONTENT */
-.content {
-  padding: 160px 60px;
+.search-icon {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ===== HERO ===== */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  padding-left: 90px;
+  padding-top: 120px;
+
+  background: url("bg-line-art.png") no-repeat center right;
+  background-size: contain;
+}
+
+.hero-content {
+  max-width: 520px;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #0b4f4a;
+}
+
+.subtitle {
+  margin-top: 16px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ff7a00;
+}
+
+/* ===== BUTTON DAFTAR ===== */
+.btn-daftar {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 32px;
+  padding: 14px 28px;
+
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+
+  background: linear-gradient(135deg, #0b4f4a, #ff7a00);
+  transition: transform 0.2s ease;
+}
+
+.btn-daftar:hover {
+  transform: translateY(-2px);
 }

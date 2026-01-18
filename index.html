@@ -1,19 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>DKV UNIKU</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>DKV UNIKU | Desain Komunikasi Visual</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<header>
-  <header>
-  <nav class="navbar">
-    <div class="brand">
-      <img src="img/logo-dkv.png" alt="Logo DKV" class="logo">
-    </div>
+<!-- ===== HEADER / NAVBAR ===== -->
+<header class="navbar">
+  <div class="logo">
+    <img src="WhatsApp_Image_2026-01-17_at_16.11.57__1_-removebg-preview.png" alt="DKV UNIKU">
+  </div>
 
+  <nav>
     <ul class="menu">
       <li><a href="index.html" class="active">Beranda</a></li>
 
@@ -36,18 +48,19 @@
           <li><a href="akademik/kurikulum.html">Kurikulum</a></li>
           <li><a href="akademik/final-year.html">Final Year</a></li>
           <li><a href="akademik/riset.html">Riset</a></li>
-          <li><a href="akademik/jurnal.html">Jurnal</a></li>
+          <li><a href="akademik/jurnal.html">Jurnal Ilmiah</a></li>
         </ul>
       </li>
 
       <li class="dropdown">
         <a href="#">Portofolio</a>
         <ul class="dropdown-menu">
-          <li><a href="portofolio/tugas-akhir.html">Tugas Akhir</a></li>
-          <li><a href="portofolio/hki.html">HKI</a></li>
+          <li><a href="portofolio/Karyatugasakhir.html">Karya tugas akhir</a></li>
+          <li><a href="portofolio/Karyaintelektual.html">Karya intelektual</a></li>
           <li><a href="portofolio/prestasi.html">Prestasi</a></li>
         </ul>
       </li>
+
 
       <li class="dropdown">
         <a href="#">News Update</a>
@@ -60,21 +73,45 @@
       <li class="dropdown">
         <a href="#">Mahasiswa & Alumni</a>
         <ul class="dropdown-menu">
-          <li><a href="mahasiswa-alumni/hima.html">HIMA DKV</a></li>
-          <li><a href="mahasiswa-alumni/ukm.html">UKM</a></li>
-          <li><a href="mahasiswa-alumni/testimoni.html">Testimoni</a></li>
-          <li><a href="mahasiswa-alumni/kadkv.html">KADKV</a></li>
+          <li><a href="hima.html">HIMA DKV</a></li>
+          <li><a href="ukm.html">UKM</a></li>
+          <li><a href="testimoni.html">Testimoni Alumni</a></li>
+          <li><a href="kadkv.html">KADKV UNIKU</a></li>
         </ul>
       </li>
     </ul>
   </nav>
+
+  <div class="search-wrapper">
+  <button class="search-icon" id="searchToggle">🔍</button>
+
+  <div class="search-box" id="searchBox">
+    <form action="search.html" method="get">
+      <input type="text" name="q" placeholder="Search" />
+    </form>
+  </div>
+</div>
+
 </header>
 
-<main class="content">
-  <h1>Desain Komunikasi Visual</h1>
-  <p>Program Studi DKV Universitas Kuningan</p>
-</main>
+<!-- ===== HERO SECTION ===== -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>
+      Desain<br>
+      Komunikasi<br>
+      Visual
+    </h1>
 
+    <p class="subtitle">Universitas Kuningan</p>
+
+    <a href="https://pmb.uniku.ac.id" class="btn-daftar">
+      Daftar <span>↗</span>
+    </a>
+  </div>
+</section>
 <script src="script.js"></script>
+
 </body>
 </html>
+
