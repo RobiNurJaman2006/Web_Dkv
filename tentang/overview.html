@@ -1,19 +1,257 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>overview | DKV UNIKU</title>
-  <link rel="stylesheet" href="../style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overview - DKV Universitas Kuningan</title>
+    <link rel="stylesheet" href="overview.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header id="mainHeader">
+      <div class="container nav-wrapper">
+        <div class="logo">
+          <img
+            src="https://dkv.uniku.ac.id/wp-content/uploads/2025/11/cropped-Favicon.png"
+            alt="Logo DKV"
+          />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#" class="active">Tentang ▾</a></li>
+            <li><a href="#">Akademik ▾</a></li>
+            <li><a href="#">Portofolio ▾</a></li>
+            <li><a href="#">News Update ▾</a></li>
+            <li><a href="#">Mahasiswa & Alumni ▾</a></li>
+            <li><button class="search-icon">🔍</button></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-<header></header>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-text animate-hero">
+        <h1>Overview</h1>
+        <p class="subtitle">Ringkasan</p>
+      </div>
+    </section>
 
-<main class="content">
-  <h1>overview</h1>
-  <p>Konten Kurikulum DKV UNIKU</p>
-</main>
+    <main class="container main-content">
+      <div class="left-side">
+        <div class="brand-box">
+          <img
+            src="https://dkv.uniku.ac.id/wp-content/uploads/2025/11/cropped-Favicon.png"
+            alt="Logo DKV Large"
+          />
+          <p>DESAIN KOMUNIKASI VISUAL<br />FKOM - UNIKU</p>
+        </div>
 
-<script src="../script.js"></script>
-</body>
+        <section id="deskripsi">
+          <h2 class="section-title">DESKRIPSI</h2>
+          <p>
+            Program Studi Desain Komunikasi Visual Universitas Kuningan (DKV
+            Uniku) berkomitmen mencetak lulusan yang kreatif, terampil, dan
+            adaptif terhadap perkembangan teknologi serta kebutuhan masyarakat.
+          </p>
+
+          <div class="info-meta">
+            <p><strong>KODE PROGRAM STUDI:</strong> 90241</p>
+            <p><strong>TANGGAL BERDIRI:</strong> 18 April 2017</p>
+            <p><strong>SK PENYELENGGARAAN:</strong> 226/KPT/I/2017</p>
+          </div>
+        </section>
+
+        <section id="visi-misi">
+          <h2 class="section-title">VISI</h2>
+          <p>
+            Menjadi Program Studi Desain Komunikasi Visual yang unggul dalam
+            menghasilkan lulusan yang terampil dan kreatif...
+          </p>
+
+          <h2 class="section-title">MISI</h2>
+          <ol class="misi-list">
+            <li>Mengembangkan kurikulum yang inovatif berbasis capaian...</li>
+            <li>Mendorong pengintegrasian nilai kelokalan...</li>
+            <li>Menyediakan fasilitas dan sumber daya yang mendukung...</li>
+          </ol>
+        </section>
+
+        <section id="akreditasi">
+          <h2 class="section-title">AKREDITASI</h2>
+          <div class="akreditasi-img-wrapper">
+            <img
+              src="ak.png"
+              alt="Akreditasi BAN-PT Baik"
+              class="img-content"
+            />
+          </div>
+        </section>
+
+        <section id="ALAMAT">
+          <h2 class="section-title">ALAMAT</h2>
+          <p>
+            Kampus uniku 2 (FKOM), jl.Pramuka No. 67, Purwawinangun, kabupaten
+            kuningan, provinsi jawa barat - 45512
+          </p>
+        </section>
+
+        <section id="EMAIL">
+          <h2 class="section-title">EMAIL</h2>
+          <p>dkv@uniku.ac.id</p>
+        </section>
+
+        <section id="profil-lulusan">
+          <h2 class="section-title">PROFIL LULUSAN & PILIHAN KARIR</h2>
+          <div class="profil-img-wrapper">
+            <img
+              src="profil.png"
+              alt="Profil Lulusan DKV"
+              class="img-content"
+            />
+          </div>
+        </section>
+      </div>
+
+      <aside class="sidebar-right">
+        <div class="info-box">
+          <ul class="accordion-info">
+            <li class="accordion-item">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">
+                <span class="arrow">▶</span> Gelar Akademik
+              </button>
+              <div class="accordion-content">
+                <p>S.Ds. (Sarjana Desain)</p>
+              </div>
+            </li>
+            <li class="accordion-item">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">
+                <span class="arrow">▶</span> Jumlah SKS
+              </button>
+              <div class="accordion-content">
+                <p>144 SKS</p>
+              </div>
+            </li>
+            <li class="accordion-item">
+              <button class="accordion-btn" onclick="toggleAccordion(this)">
+                <span class="arrow">▶</span> Masa Studi
+              </button>
+              <div class="accordion-content">
+                <p>4 – 7 Tahun</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <section class="achievement-sidebar">
+          <h2 class="section-title">PRESTASI MAHASISWA</h2>
+          <ul id="prestasiList" class="prestasi-sidebar-list">
+            <li>1. Juara 3 Festival Film Mahasiswa Indonesia (FFMI) 2020</li>
+            <li>2. Juara 3 Battle of Learning Art 2020</li>
+            <li>3. Juara 1 lomba poster Earth Hour Day 2021</li>
+          </ul>
+          <button
+            id="btnLoadMore"
+            class="btn-sidebar"
+            onclick="showAllAchievements()"
+          >
+            Tampilkan Lebih Banyak
+          </button>
+        </section>
+
+        <section class="cert-sidebar">
+          <h2 class="section-title">SERTIFIKASI</h2>
+          <div class="cert-container-side">
+            <img src="p.png" alt="Adobe Certified" class="img-cert-side" />
+          </div>
+          <div class="social-buttons-side">
+            <a href="https://dkv.uniku.ac.id" target="_blank" class="social-btn"
+              ><i class="fas fa-globe"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/dkvuniku"
+              target="_blank"
+              class="social-btn"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@dkvuniku"
+              target="_blank"
+              class="social-btn"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </section>
+
+        <div class="side-images">
+          <img
+            src="WhatsApp Image 2026-01-19 at 22.24.52.jpeg"
+            alt="Gallery 1"
+          />
+          <img
+            src="WhatsApp Image 2026-01-19 at 22.25.16.jpeg"
+            alt="Gallery 2"
+          />
+        </div>
+
+        <div class="impact-section">
+          <h3>KEGIATAN KAMPUS BERDAMPAK</h3>
+          <p>Magang Mandiri, Kerja Profesi</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div class="footer-col branding">
+          <div class="footer-logos">
+            <img src="logouniku-removebg-preview.png" alt="Uniku" />
+            <img src="fkom-transparan-biru.png" alt="FKOM" />
+            <img src="dkv.png" alt="DKV" />
+          </div>
+          <h3>FAKULTAS ILMU KOMPUTER<br />UNIVERSITAS KUNINGAN</h3>
+          <p>Jl. Pramuka No. 67, Purwawinangun, Kuningan, Jawa Barat - 45512</p>
+          <p>(0232) 875 097 | dkv@uniku.ac.id</p>
+        </div>
+
+        <div class="footer-col links">
+          <div class="link-header">
+            <span class="icon">↗</span>
+            <h3>Tautan</h3>
+          </div>
+          <ul>
+            <li><a href="#">Website Fakultas Ilmu Komputer</a></li>
+            <li><a href="#">Website Universitas Kuningan</a></li>
+            <li><a href="#">Penerimaan Mahasiswa Baru</a></li>
+            <li><a href="#">LMS Hybrid</a></li>
+            <li><a href="#">Student Site</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col social">
+          <div class="social-icons">
+            <a href="#">📸</a>
+            <a href="#">🎥</a>
+            <a href="#">💬</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          Hak Cipta © Universitas Kuningan | Designed by Prodi Desain Komunikasi
+          Visual | Developed by Pusat Sistem Informasi
+        </p>
+      </div>
+    </footer>
+
+    <script src="overview.js"></script>
+  </body>
 </html>
