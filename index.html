@@ -1,117 +1,120 @@
 <!doctype html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <title>DKV UNIKU | Desain Komunikasi Visual</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>DKV UNIKU | Desain Komunikasi Visual</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="style.css" />
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
+    <!-- ===== HEADER / NAVBAR ===== -->
+    <header class="navbar">
+      <div class="logo">
+        <img
+          src="WhatsApp_Image_2026-01-17_at_16.11.57__1_-removebg-preview.png"
+          alt="DKV UNIKU"
+        />
+      </div>
 
-<!-- ===== HEADER / NAVBAR ===== -->
-<header class="navbar">
-  <div class="logo">
-    <img src="WhatsApp_Image_2026-01-17_at_16.11.57__1_-removebg-preview.png" alt="DKV UNIKU">
-  </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html" class="active">Beranda</a></li>
 
-  <nav>
-    <ul class="menu">
-      <li><a href="index.html" class="active">Beranda</a></li>
+          <li class="dropdown">
+            <a href="#">Tentang</a>
+            <ul class="dropdown-menu">
+              <li><a href="tentang/overview.html">Overview</a></li>
+              <li><a href="tentang/sejarah.html">Sejarah</a></li>
+              <li><a href="tentang/visi-misi.html">Visi & Misi</a></li>
+              <li><a href="tentang/struktural.html">Struktural</a></li>
+              <li><a href="tentang/dosen.html">Dosen</a></li>
+              <li><a href="tentang/fasilitas.html">Fasilitas</a></li>
+              <li><a href="tentang/brand-identity.html">Brand Identity</a></li>
+            </ul>
+          </li>
 
-      <li class="dropdown">
-        <a href="#">Tentang</a>
-        <ul class="dropdown-menu">
-          <li><a href="tentang/overview.html">Overview</a></li>
-          <li><a href="tentang/sejarah.html">Sejarah</a></li>
-          <li><a href="tentang/visi-misi.html">Visi & Misi</a></li>
-          <li><a href="tentang/struktural.html">Struktural</a></li>
-          <li><a href="tentang/dosen.html">Dosen</a></li>
-          <li><a href="tentang/fasilitas.html">Fasilitas</a></li>
-          <li><a href="tentang/brand-identity.html">Brand Identity</a></li>
+          <li class="dropdown">
+            <a href="#">Akademik</a>
+            <ul class="dropdown-menu">
+              <li><a href="akademik/kurikulum.html">Kurikulum</a></li>
+              <li><a href="akademik/final-year.html">Final Year</a></li>
+              <li><a href="akademik/riset.html">Riset</a></li>
+              <li><a href="akademik/jurnal.html">Jurnal Ilmiah</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#">Portofolio</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="portofolio/Karyatugasakhir.html">Karya Tugas Akhir</a>
+              </li>
+              <li>
+                <a href="portofolio/Karyaintelektual.html">Karya Intelektual</a>
+              </li>
+              <li><a href="portofolio/prestasi.html">Prestasi</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#">News Update</a>
+            <ul class="dropdown-menu">
+              <li><a href="news/berita.html">Berita</a></li>
+              <li><a href="news/event.html">Event</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#">Mahasiswa & Alumni</a>
+            <ul class="dropdown-menu">
+              <li><a href="hima.html">HIMA DKV</a></li>
+              <li><a href="ukm.html">UKM</a></li>
+              <li><a href="testimoni.html">Testimoni Alumni</a></li>
+              <li><a href="kadkv.html">KADKV UNIKU</a></li>
+            </ul>
+          </li>
         </ul>
-      </li>
+      </nav>
 
-      <li class="dropdown">
-        <a href="#">Akademik</a>
-        <ul class="dropdown-menu">
-          <li><a href="akademik/kurikulum.html">Kurikulum</a></li>
-          <li><a href="akademik/final-year.html">Final Year</a></li>
-          <li><a href="akademik/riset.html">Riset</a></li>
-          <li><a href="akademik/jurnal.html">Jurnal Ilmiah</a></li>
-        </ul>
-      </li>
+      <!-- ===== SEARCH ===== -->
+      <div class="search-wrapper">
+        <button class="search-icon" id="searchToggle">🔍</button>
 
-      <li class="dropdown">
-        <a href="#">Portofolio</a>
-        <ul class="dropdown-menu">
-          <li><a href="portofolio/Karyatugasakhir.html">Karya tugas akhir</a></li>
-          <li><a href="portofolio/Karyaintelektual.html">Karya intelektual</a></li>
-          <li><a href="portofolio/prestasi.html">Prestasi</a></li>
-        </ul>
-      </li>
+        <div class="search-box" id="searchBox">
+          <input type="text" id="searchInput" placeholder="Cari menu..." />
+          <div class="search-empty" id="searchEmpty"></div>
+        </div>
+      </div>
+    </header>
 
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>
+          Desain<br />
+          Komunikasi<br />
+          Visual
+        </h1>
 
-      <li class="dropdown">
-        <a href="#">News Update</a>
-        <ul class="dropdown-menu">
-          <li><a href="news/berita.html">Berita</a></li>
-          <li><a href="news/event.html">Event</a></li>
-        </ul>
-      </li>
+        <p class="subtitle">Universitas Kuningan</p>
 
-      <li class="dropdown">
-        <a href="#">Mahasiswa & Alumni</a>
-        <ul class="dropdown-menu">
-          <li><a href="hima.html">HIMA DKV</a></li>
-          <li><a href="ukm.html">UKM</a></li>
-          <li><a href="testimoni.html">Testimoni Alumni</a></li>
-          <li><a href="kadkv.html">KADKV UNIKU</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
+        <a href="https://pmb.uniku.ac.id" class="btn-daftar">
+          Daftar <span>↗</span>
+        </a>
+      </div>
+    </section>
 
-  <div class="search-wrapper">
-  <button class="search-icon" id="searchToggle">🔍</button>
-
-  <div class="search-box" id="searchBox">
-    <form action="search.html" method="get">
-      <input type="text" name="q" placeholder="Search" />
-    </form>
-  </div>
-</div>
-
-</header>
-
-<!-- ===== HERO SECTION ===== -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>
-      Desain<br>
-      Komunikasi<br>
-      Visual
-    </h1>
-
-    <p class="subtitle">Universitas Kuningan</p>
-
-    <a href="https://pmb.uniku.ac.id" class="btn-daftar">
-      Daftar <span>↗</span>
-    </a>
-  </div>
-</section>
-<script src="script.js"></script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
-

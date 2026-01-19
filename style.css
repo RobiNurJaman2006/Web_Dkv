@@ -8,8 +8,10 @@
 
 body {
   background: #ffffff;
+  overflow-x: hidden;
 }
-/* ===== SEARCH ===== */
+
+/* ================= SEARCH ================= */
 .search-wrapper {
   position: relative;
 }
@@ -26,15 +28,13 @@ body {
   position: absolute;
   top: 40px;
   right: 0;
-
   background: #fff;
   padding: 15px;
   width: 260px;
-
   border-top: 4px solid #ff7a00;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-
   display: none;
+  animation: fadeDown 0.3s ease;
 }
 
 .search-box input {
@@ -44,7 +44,7 @@ body {
   font-size: 14px;
 }
 
-/* ===== NAVBAR ===== */
+/* ================= NAVBAR ================= */
 .navbar {
   position: fixed;
   top: 0;
@@ -56,15 +56,22 @@ body {
   justify-content: space-between;
 
   padding: 16px 64px;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.85);
   backdrop-filter: blur(12px);
+  transition: all 0.4s ease;
+}
+
+/* efek scroll */
+.navbar.scrolled {
+  padding: 12px 64px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
 .logo img {
   height: 64px;
 }
 
-/* MENU */
+/* ================= MENU ================= */
 .menu {
   display: flex;
   list-style: none;
@@ -75,32 +82,52 @@ body {
   text-decoration: none;
   font-weight: 600;
   color: #0b4f4a;
+  position: relative;
+}
+
+/* garis bawah animasi */
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background: #ff7a00;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after,
+.menu a.active::after {
+  width: 100%;
 }
 
 .menu a.active {
   color: #ff7a00;
 }
 
-/* DROPDOWN */
+/* ================= DROPDOWN ================= */
 .dropdown {
   position: relative;
 }
 
 .dropdown-menu {
   position: absolute;
-  top: 120%;
+  top: 130%;
   left: 0;
   background: #fff;
-  min-width: 200px;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  min-width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   display: none;
+  animation: fadeDown 0.3s ease;
 }
 
 .dropdown-menu a {
   display: block;
-  padding: 12px 20px;
+  padding: 14px 20px;
   color: #333;
+  font-weight: 500;
 }
 
 .dropdown-menu a:hover {
@@ -112,33 +139,45 @@ body {
   display: block;
 }
 
-.search-icon {
-  font-size: 18px;
-  cursor: pointer;
-}
-
-/* ===== HERO ===== */
+/* ================= HERO ================= */
 .hero {
   height: 100vh;
   display: flex;
   align-items: center;
-
   padding-left: 90px;
   padding-top: 120px;
+  position: relative;
+  background: #ffffff;
+  overflow: hidden;
+}
 
-  background: url("bg-line-art.png") no-repeat center right;
+/* background ilustrasi */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("Ilustrasi\ Gedung\ Rekrtorat.jpg");
+  background-repeat: no-repeat;
+  background-position: center right;
   background-size: contain;
+  opacity: 0.15;
+  z-index: 1;
+  animation: zoomSlow 10s ease-in-out infinite alternate;
 }
 
 .hero-content {
+  position: relative;
   max-width: 520px;
+  z-index: 2;
 }
 
+/* animasi teks */
 .hero-content h1 {
   font-size: 64px;
   line-height: 1.15;
   font-weight: 700;
   color: #0b4f4a;
+  animation: fadeUp 1s ease forwards;
 }
 
 .subtitle {
@@ -146,26 +185,84 @@ body {
   font-size: 22px;
   font-weight: 600;
   color: #ff7a00;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.3s;
 }
 
-/* ===== BUTTON DAFTAR ===== */
+/* ================= BUTTON ================= */
 .btn-daftar {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-
   margin-top: 32px;
-  padding: 14px 28px;
-
+  padding: 14px 32px;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
   color: #fff;
-
   background: linear-gradient(135deg, #0b4f4a, #ff7a00);
-  transition: transform 0.2s ease;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.6s;
+  transition: all 0.3s ease;
 }
 
 .btn-daftar:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(255,122,0,0.4);
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomSlow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+
+  /* PESAN SEARCH KOSONG */
+.search-empty {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+  display: none;
+ }
+/* ===== SEARCH RESULT EMPTY (TAMBAHAN AMAN) ===== */
+.search-empty {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+  display: none;
+}
+
+/* highlight menu hasil search */
+.menu a.search-match {
+  background: #fff3e6;
+  border-radius: 6px;
 }
