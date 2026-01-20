@@ -12,31 +12,31 @@ searchToggle.addEventListener("click", () => {
 
 // ================= DATA MENU =================
 const pages = {
-  "overview": "tentang/overview.html",
-  "sejarah": "tentang/sejarah.html",
-  "visi": "tentang/visi-misi.html",
-  "misi": "tentang/visi-misi.html",
-  "struktural": "tentang/struktural.html",
-  "dosen": "tentang/dosen.html",
-  "fasilitas": "tentang/fasilitas.html",
+  overview: "tentang/overview.html",
+  sejarah: "tentang/sejarah.html",
+  visi: "tentang/visi-misi.html",
+  misi: "tentang/visi-misi.html",
+  struktural: "tentang/struktural.html",
+  dosen: "tentang/dosen.html",
+  fasilitas: "tentang/fasilitas.html",
+  "brand identity": "tentang/brand-identity.html",
 
-  "kurikulum": "akademik/kurikulum.html",
+  kurikulum: "akademik/kurikulum.html",
   "final year": "akademik/final-year.html",
-  "riset": "akademik/riset.html",
-  "jurnal": "akademik/jurnal.html",
+  riset: "akademik/riset.html",
+  jurnal: "akademik/jurnal.html",
 
   "tugas akhir": "portofolio/Karyatugasakhir.html",
   "karya intelektual": "portofolio/Karyaintelektual.html",
-  "prestasi": "portofolio/prestasi.html",
 
-  "berita": "news/berita.html",
-  "event": "news/event.html",
+  berita: "news/berita.html",
+  event: "news/event.html",
 
-  "hima": "hima.html",
-  "ukm": "ukm.html",
-  "testimoni": "testimoni.html",
-  "kadkv": "kadkv.html",
-  "tracer study": "tracerstudy.html"
+  hima: "hima.html",
+  testimoni: "testimoni.html",
+  "ka dkv": "kadkv.html",
+  "tracer study": "tracerstudy.html",
+  "register alumni": "registeralumni.html",
 };
 
 // ================= SEARCH ACTION =================
