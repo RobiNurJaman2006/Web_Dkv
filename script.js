@@ -35,7 +35,8 @@ const pages = {
   "hima": "hima.html",
   "ukm": "ukm.html",
   "testimoni": "testimoni.html",
-  "kadkv": "kadkv.html"
+  "kadkv": "kadkv.html",
+  "tracer study": "tracerstudy.html"
 };
 
 // ================= SEARCH ACTION =================

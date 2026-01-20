@@ -1,0 +1,142 @@
+/* --- VARIABLES --- */
+:root {
+    --dkv-teal: #004d4d;
+    --dkv-orange: #f39200;
+    --dkv-text: #333;
+}
+
+/* --- GLOBAL STYLES --- */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dkv-text);
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- NAVBAR (LAYOUT FULL KUNCI) --- */
+.navbar {
+    position: absolute; /* Membuat navbar berada di atas hero */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 1.5rem 0;
+    background-color: transparent !important; /* Transparan agar hero naik */
+    border-bottom: none; /* Menghapus border agar menyatu */
+}
+
+.navbar-brand img { 
+    height: 90px; 
+}
+
+/* --- HERO SECTION (LAYOUT FULL KUNCI) --- */
+.hero-section {
+    position: relative;
+    /* Menggunakan linear gradient dari CSS lama Anda dan background full */
+    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), 
+                url('gedung.jpeg') no-repeat center center;
+    background-size: cover;
+    padding: 160px 0 100px 0; /* Padding atas besar agar teks tidak tertabrak logo */
+    text-align: center;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--dkv-teal);
+    margin-bottom: 5px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--dkv-orange);
+    font-weight: 600;
+    margin-top: 0;
+}
+
+/* --- PORTFOLIO GRID --- */
+.card-portfolio {
+    border: none;
+    background: transparent;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.img-container {
+    border-radius: 25px; /* Sesuai gaya CSS Anda sebelumnya */
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    aspect-ratio: 1/1;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card-portfolio:hover img { 
+    transform: scale(1.05); 
+}
+
+.author-name {
+    color: var(--dkv-orange);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.project-title {
+    color: var(--dkv-teal);
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+/* --- FOOTER --- */
+.main-footer {
+    background-color: #e9ecef;
+    padding: 60px 0 30px 0;
+    margin-top: 50px;
+}
+
+.footer-logo-grid img { 
+    height: 90px; 
+    margin-right: 15px; 
+}
+
+.footer-address { 
+    font-size: 0.9rem; 
+    color: var(--dkv-teal); 
+    margin-top: 20px; 
+    line-height: 1.6;
+}
+
+/* --- COPYRIGHT BAR --- */
+.copyright-bar {
+    background-color: var(--dkv-teal);
+    color: white;
+    padding: 15px 0;
+    font-size: 0.85rem;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 120px;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}

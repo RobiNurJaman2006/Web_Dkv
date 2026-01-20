@@ -1,0 +1,468 @@
+/* ======================================================
+   1. VARIABEL & RESET
+====================================================== */
+:root {
+    --uniku-teal: #004d40;
+    --uniku-orange: #ff6d00;
+    --text-gray: #444;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: 'Open Sans', sans-serif; 
+    color: var(--text-gray); 
+    overflow-x: hidden; 
+    line-height: 1.6;
+}
+
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+a { text-decoration: none !important; }
+
+/* ======================================================
+   2. HERO SECTION & ANIMATIONS
+====================================================== */
+@keyframes smoothFadeUp {
+    0% { opacity: 0; transform: translateY(40px); filter: blur(8px); }
+    100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+@keyframes smoothFadeBg {
+    0% { opacity: 0; filter: brightness(1.3); }
+    100% { opacity: 1; filter: brightness(1); }
+}
+
+@keyframes smoothZoom {
+    0% { background-size: 115%; }
+    100% { background-size: 100%; }
+}
+
+.hero {
+    height: 450px; 
+    margin-top: 80px;
+    background: url('gedung.jpeg') no-repeat center bottom;
+    background-size: cover; 
+    display: flex; 
+    align-items: center; 
+    position: relative;
+    animation: 
+        smoothFadeBg 2s cubic-bezier(0.25, 1, 0.5, 1) forwards, 
+        smoothZoom 3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-overlay {
+    position: absolute; 
+    inset: 0;
+    background: linear-gradient(90deg, rgba(255,255,255,0.92) 30%, transparent);
+}
+
+.hero-text { position: relative; z-index: 2; }
+.hero-text h1 { 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 80px; 
+    color: var(--uniku-teal); 
+    opacity: 0;
+    animation: smoothFadeUp 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.5s;
+}
+
+.hero-text .subtitle { 
+    font-size: 30px; 
+    color: var(--uniku-orange); 
+    font-weight: 700; 
+    margin-top: -10px; 
+    opacity: 0;
+    animation: smoothFadeUp 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.8s;
+}
+
+/* ======================================================
+   3. BRAND IDENTITY (Logo & Color)
+====================================================== */
+.main-identity-wrapper { padding: 80px 0; }
+.section-title-teal, .title-teal {
+    color: var(--uniku-teal);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.description-text {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 50px;
+}
+
+.logo-explanation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.logo-image-large img {
+    width: 100%;
+    max-width: 400px;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+}
+
+/* Color Palette */
+.color-visual {
+    display: flex;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.color-bar {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 20px;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 12px;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.color-bar:hover { flex: 1.5; }
+.color-bar.black { background: var(--black); }
+.color-bar.gray { background: linear-gradient(to bottom, #bdbdbd, #e0e0e0); color: #333; }
+.color-bar.white { background: var(--white); color: #333; border-left: 1px solid #eee; }
+.color-bar.yellow { background: #f4be0c; } /* Deep Yellow */
+
+/* ======================================================
+   4. VARIAN & TYPOGRAPHY
+====================================================== */
+.variant-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.logo-box {
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 15px;
+}
+
+.bg-light { background-color: var(--white); border: 1px solid #eee; }
+.bg-dark { background-color: var(--black); border-radius: 40px; } /* */
+
+.logo-box img { max-width: 100%; height: auto; }
+
+/* Tipografi - Poppins */
+.typography-section { margin-top: 100px; padding-bottom: 50px; }
+.typo-wrapper { display: flex; gap: 60px; align-items: flex-start; }
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+    font-size: 120px;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.font-weights p { font-family: 'Poppins', sans-serif; font-size: 24px; margin-bottom: 8px; }
+.thin { font-weight: 100; }
+.extralight { font-weight: 200; }
+.light { font-weight: 300; }
+.regular { font-weight: 400; }
+.medium { font-weight: 500; }
+.semibold { font-weight: 600; }
+.bold { font-weight: 700; }
+.extrabold { font-weight: 800; }
+.black-font { font-weight: 900; }
+
+/* ======================================================
+   5. DOWNLOAD SECTION
+====================================================== */
+.download-section { padding: 80px 0; background-color: var(--white); }
+.download-instruction {
+    margin-bottom: 40px;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.download-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.download-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.card-preview {
+    background-color: #bdbdbd; /* */
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card-preview img { width: 90%; height: 90%; object-fit: contain; transition: 0.5s ease; }
+.download-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.download-card:hover .card-preview img { transform: scale(1.05); }
+
+.card-info { padding: 25px; }
+.card-info h3 { color: var(--uniku-teal); font-family: 'Montserrat', sans-serif; font-size: 20px; }
+.card-info p { color: #777; font-size: 14px; margin-top: 5px; }
+
+.credit-section { border-top: 1px solid #eee; padding-top: 30px; margin-top: 50px; }
+.credit-section p { font-size: 14px; color: #666; }
+
+/* ======================================================
+   6. RESPONSIVE
+===================================================== */
+@media (max-width: 992px) {
+    .typo-wrapper { flex-direction: column; gap: 30px; }
+    .font-poppins { font-size: 80px; }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 { font-size: 45px; }
+    .hero { height: 350px; }
+    .logo-explanation-grid, .variant-grid { grid-template-columns: 1fr; }
+    .color-visual { height: 150px; }
+}
+
+/* Hilangkan garis pada pembungkus luar */
+footer {
+    background-color: #f1f1f1; /* Pastikan warna latar abu-abu terang */
+    padding: 60px 0 0;
+    border-top: none !important; 
+}
+
+/* Biarkan hanya satu garis teal sebagai pembatas di paling bawah */
+.footer-bottom {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top: 5px solid #004d40; /* Hanya satu garis di sini */
+}
+/* bagian akhir*/
+/* ============================= */
+/* FOOTER (SUDAH DISATUKAN) */
+/* ============================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer {
+    background-color: #eeeeee;
+    color: #004b50;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 60px;
+    flex-wrap: wrap;
+}
+
+/* KIRI */
+.footer-left {
+    width: 45%;
+}
+
+.footer-left h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.footer-left h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-left p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* KANAN */
+.footer-right {
+    width: 45%;
+}
+
+.footer-right ul {
+    list-style: none;
+}
+
+.footer-right ul li {
+    margin-bottom: 10px;
+}
+
+.footer-right ul li a {
+    text-decoration: none;
+    color: #004b50;
+}
+
+.footer-right ul li a:hover {
+    text-decoration: underline;
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+    background-color: #004b50;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer {
+    background-color: #eeeeee;
+    color: #004b50;
+}
+
+/* TOP */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.logo-group img {
+    height: 45px;
+    margin-right: 15px;
+}
+
+.top-icons i {
+    font-size: 22px;
+    margin-left: 18px;
+    cursor: pointer;
+    color: #0097a7;
+}
+
+.top-icons i:hover {
+    color: #006064;
+}
+
+/* ISI */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 60px;
+    flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+    width: 45%;
+}
+
+.footer-left h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.footer-left h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-left p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.footer-right ul {
+    list-style: none;
+}
+
+.footer-right ul li {
+    margin-bottom: 10px;
+}
+
+.footer-right ul li a {
+    text-decoration: none;
+    color: #004b50;
+}
+
+.footer-right ul li a:hover {
+    text-decoration: underline;
+}
+
+/* BOTTOM */
+.footer-bottom {
+    background-color: #004b50;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+/* Bagian ini akan mengubah latar belakang area informasi menjadi abu-abu */
+footer {
+    background-color: #f1f1f1; /* Warna abu-abu terang sesuai keinginan Anda */
+    padding: 60px 0 0; /* Memberi ruang di atas agar tidak mepet */
+    border-top: none; /* Menghilangkan garis pembatas atas jika ada */
+    color: #333; /* Warna teks gelap agar mudah dibaca di atas abu-abu */
+}
+
+/* Bagian ini tetap menggunakan warna Teal pekat agar kontras di paling bawah */
+.footer-bottom {
+    background-color: #004d40; /* Teal pekat sesuai identitas */
+    color: #ffffff; /* Teks putih */
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: 40px; /* Jarak antara konten abu-abu dengan bar teal */
+}
+
+
+/* Responsif Mobile */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* Menumpuk satu kolom di HP */
+        text-align: center;
+    }
+
+    .footer-logos, .social-icons {
+        justify-content: center;
+    }
+
+    .social-icons {
+        margin-top: 20px;
+    }
+}

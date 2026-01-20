@@ -1,0 +1,151 @@
+/* Custom Variables */
+:root {
+    --dkv-teal: #0b5f5a;
+    --dkv-orange: #ff6b00;
+    --light-bg: #efefef;
+    --tab-bg: #f0f0f0;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.text-teal { color: var(--dkv-teal) !important; }
+.text-orange { color: var(--dkv-orange) !important; }
+
+/* Navbar */
+.navbar-dkv {
+    border-bottom: 3px solid var(--dkv-teal);
+    padding: 15px 0;
+    background: #fff;
+}
+
+/* Hero Section */
+.hero {
+    height: 450px; /* Anda bisa memperbesar tingginya karena sekarang dimulai dari paling atas */
+    margin-top: 0; 
+    padding-top: 80px; /* Memberi ruang agar teks tidak tertabrak logo di layar kecil */
+    background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), 
+                url('gedung.jpeg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--dkv-teal);
+    margin-bottom: 5px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: var(--dkv-orange);
+    font-weight: 600;
+}
+
+/* Tab Buttons */
+.btn-tab {
+    padding: 12px 28px;
+    border: none;
+    background-color: var(--tab-bg);
+    color: #444;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-tab:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-tab.active {
+    background-color: var(--dkv-teal);
+    color: #fff;
+}
+
+/* Profile Items */
+.icon-box {
+    width: 120px;
+    height: 120px;
+    background-color: var(--dkv-teal);
+    border-radius: 30px; /* Sudut membulat sesuai foto */
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.icon-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-text h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+/* Table Customization */
+.border-radius-custom {
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #dee2e6;
+}
+
+/* Footer Styling */
+.footer-main {
+    background-color: var(--light-bg);
+    padding: 60px 0;
+    border-top: 1px solid #ddd;
+}
+
+.university-info h5 {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--dkv-teal);
+    transition: 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--dkv-orange);
+    text-decoration: underline;
+}
+
+.social-icons a {
+    color: var(--dkv-teal);
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    color: var(--dkv-orange);
+}
+
+.footer-bar {
+    background-color: var(--dkv-teal);
+    color: #fff;
+    padding: 15px 0;
+    font-size: 0.85rem;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .icon-box { width: 80px; height: 80px; border-radius: 20px; }
+    .profil-row { flex-direction: column; }
+    .content-text { margin-left: 0 !important; margin-top: 15px; }
+}

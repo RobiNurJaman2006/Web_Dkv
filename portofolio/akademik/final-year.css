@@ -1,0 +1,122 @@
+:root {
+    --primary-dkv: #0b5f5a;
+    --accent-orange: #ff8c00;
+    --footer-bg: #efefef;
+}
+
+body {
+    background-color: white;
+    color: #333;
+}
+
+/* NAVBAR */
+.navbar-dkv {
+    border-bottom: 2px solid var(--primary-dkv);
+}
+
+/* HERO */
+.hero {
+    height: 450px; /* Anda bisa memperbesar tingginya karena sekarang dimulai dari paling atas */
+    margin-top: 0; 
+    padding-top: 80px; /* Memberi ruang agar teks tidak tertabrak logo di layar kecil */
+    background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), 
+                url('gedung.jpeg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary-dkv);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--accent-orange);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* SECTION TITLE CUSTOM */
+.section-title {
+    color: var(--primary-dkv);
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+.section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #dee2e6;
+    margin-left: 15px;
+}
+
+/* BOOTSTRAP ACCORDION OVERRIDE */
+.text-teal { color: var(--primary-dkv) !important; }
+.text-orange { color: var(--accent-orange) !important; }
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: var(--primary-dkv);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+}
+
+/* SCOPE CARDS */
+.icon-box {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.icon-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.icon-box:hover img {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+.footer-container {
+    background-color: var(--footer-bg);
+    border-top: 1px solid #dee2e6;
+}
+
+.footer-bar {
+    background-color: var(--primary-dkv);
+    color: white;
+}
+
+.footer-links a:hover {
+    color: var(--accent-orange) !important;
+}
+
+.social-icons i {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.social-icons i:hover {
+    color: var(--accent-orange);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .hero { height: 250px; }
+}

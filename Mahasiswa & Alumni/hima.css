@@ -1,0 +1,421 @@
+:root {
+  --yellow-color: #f1bc19;
+  --dark-teal: #004a54;
+  --footer-bg: #e4e9ec;
+  --text-dark: #333;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-dark);
+}
+
+/* Header & Nav */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+  align-items: center;
+}
+
+.top-logo {
+  height: 35px;
+}
+
+.menu-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--dark-teal);
+  font-weight: 700;
+}
+
+.burger-icon span {
+  display: block;
+  width: 20px;
+  height: 3px;
+  background: var(--yellow-color);
+  margin: 3px 0;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 300px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    url("WhatsApp Image 2026-01-20 at 17.20.44.jpeg"); /* Masukkan gambar grayscale */
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.hero-content p {
+  color: var(--yellow-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Branding */
+.brand-section {
+  padding: 40px 30px;
+}
+
+.hima-logo-big {
+  width: 250px;
+  display: block;
+}
+
+.hima-name {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+
+.full-title {
+  color: var(--yellow-color);
+  font-size: 2.8rem;
+  line-height: 1.05;
+  font-weight: 800;
+  margin-top: 20px;
+}
+
+/* Navigation Tabs - Persis Gambar */
+.tab-navigation {
+  display: flex;
+  padding: 0 20px;
+  gap: 10px;
+}
+
+.tab-item {
+  background: #f1f1f1;
+  padding: 15px 20px;
+  border-radius: 15px 15px 0 0;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #555;
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.tab-item.active {
+  background: var(--yellow-color);
+  color: white;
+}
+
+/* Pointer segitiga di tab aktif */
+.tab-item.active .pointer {
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--yellow-color);
+}
+
+/* Footer & Details */
+.footer-container {
+  background-color: var(--footer-bg);
+  margin-top: 40px;
+}
+
+.ig-follow-section {
+  background: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.ig-button {
+  background: var(--yellow-color);
+  color: white;
+  text-decoration: none;
+  padding: 12px 40px;
+  border-radius: 30px;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.footer-details {
+  padding: 40px 30px;
+}
+
+.partner-logos {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.partner-logos img {
+  height: 35px;
+}
+
+.address-box h4 {
+  color: var(--dark-teal);
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+.address-box p {
+  color: var(--dark-teal);
+  margin: 4px 0;
+  font-weight: 500;
+}
+
+.external-links {
+  margin-top: 40px;
+}
+
+.link-item {
+  color: var(--dark-teal);
+  margin-bottom: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bottom-copyright {
+  background: var(--dark-teal);
+  color: white;
+  padding: 20px;
+  font-size: 0.75rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Styling Konten Visi Misi */
+.content-section {
+  padding: 40px 30px;
+  background-color: #fff;
+}
+
+.section-title {
+  color: var(--dark-teal);
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* Garis bawah tipis di bawah judul seperti standar web Uniku */
+.section-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: var(--yellow-color);
+  margin-top: 5px;
+}
+
+.content-text {
+  margin-bottom: 40px;
+  line-height: 1.8;
+  color: #444;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.content-text ol {
+  padding-left: 20px;
+}
+
+.content-text li {
+  margin-bottom: 10px;
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 600px) {
+  .full-title {
+    font-size: 2.2rem;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .tab-item {
+    font-size: 0.7rem;
+    padding: 10px 5px;
+  }
+}
+/* Sembunyikan konten secara default */
+.tab-content {
+  display: none;
+  padding: 40px 30px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Tampilkan hanya yang memiliki class active */
+.tab-content.active {
+  display: block;
+}
+
+/* Hilangkan pointer (segitiga) jika tab tidak aktif */
+.tab-item .pointer {
+  display: none;
+}
+
+.tab-item.active .pointer {
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--yellow-color);
+}
+
+/* Animasi transisi halus */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Penyesuaian pointer untuk mobile agar tetap di tengah */
+@media (max-width: 600px) {
+  .tab-item.active .pointer {
+    left: 45%;
+  }
+}
+
+/* Container Utama Bagan */
+.org-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Box Umum */
+.org-box,
+.koor-box {
+  background: white;
+  border: 1.5px solid #333;
+  padding: 10px;
+  width: 220px;
+  text-align: center;
+  margin: 5px;
+}
+
+.org-box .role,
+.koor-box .role {
+  font-weight: 800;
+  color: var(--dark-teal);
+  font-size: 0.8rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.org-box .name,
+.koor-box .name {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Styling Khusus Level */
+.org-box.main {
+  border-left: 5px solid var(--yellow-color);
+}
+.org-box.secondary {
+  border-left: 5px solid var(--dark-teal);
+}
+
+/* Garis Penghubung Sederhana */
+.org-line-v {
+  width: 2px;
+  height: 20px;
+  background: #333;
+}
+.org-line-v-short {
+  width: 2px;
+  height: 10px;
+  background: #333;
+  margin: 0 auto;
+}
+
+/* Layout Row & Grid */
+.org-flex-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.koor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom di desktop */
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Responsif Mobile */
+@media (max-width: 768px) {
+  .org-flex-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .koor-grid {
+    grid-template-columns: 1fr;
+  } /* 1 kolom di HP */
+  .org-box,
+  .koor-box {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Styling Khusus Program Kerja */
+.proker-header {
+  color: var(--dark-teal);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.proker-item {
+  margin-bottom: 40px;
+}
+
+.proker-title {
+  color: var(--dark-teal);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.proker-description {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  font-weight: 500;
+}
+
+/* Penyesuaian margin container agar teks tidak terlalu mepet ke pinggir */
+.tab-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}

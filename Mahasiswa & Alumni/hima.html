@@ -1,19 +1,260 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>hima | DKV UNIKU</title>
-  <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIMA DKV UNIKU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hima.css">
 </head>
 <body>
 
-<header></header>
+    <header class="navbar">
+        <img src="WhatsApp_Image_2026-01-17_at_16.11.57-removebg-preview (1).png" alt="DKV Logo" class="top-logo">
+    </header>
 
-<main class="content">
-  <h1>Kurikulum</h1>
-  <p>Konten Kurikulum DKV UNIKU</p>
-</main>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Organisasi</h1>
+            <p>Kemahasiswaan</p>
+        </div>
+    </section>
 
-<script src="../script.js"></script>
+    <section class="brand-section">
+        <div class="logo-container">
+            <img src="Logo-Hitam.png" alt="HIMA DKV UNIKU" class="hima-logo-big">
+            <h2 class="hima-name">HIMA DKV UNIKU</h2>
+        </div>
+        
+        <h3 class="full-title">
+            Himpunan <br>
+            Mahasiswa <br>
+            Desain <br>
+            Komunikasi <br>
+            Visual <br>
+            Universitas <br>
+            Kuningan
+        </h3>
+    </section>
+
+   
+    <nav class="tab-navigation">
+    <div class="tab-item active" onclick="openTab('visi-misi')">
+        Visi & Misi
+        <div class="pointer"></div>
+    </div>
+    <div class="tab-item" onclick="openTab('struktur')">
+        Struktur Organisasi
+        <div class="pointer"></div>
+    </div>
+    <div class="tab-item" onclick="openTab('proker')">
+        Program Kerja
+        <div class="pointer"></div>
+    </div>
+</nav>
+
+<section class="main-content-area">
+    
+    <div id="visi-misi" class="tab-content active">
+        <h2 class="section-title">VISI</h2>
+        <div class="content-text">
+            <p>Menjadikan Himpunan Mahasiswa Desain Komunikasi Visual (HIMA DKV) Universitas Kuningan sebagai organisasi yang aktif, inovatif, dan kolaboratif dalam mengembangkan potensi kreatif mahasiswa serta berkontribusi nyata bagi masyarakat berbasis nilai-nilai lokal dan kemajuan teknologi.</p>
+        </div>
+        <h2 class="section-title">MISI</h2>
+        <div class="content-text">
+            <ol>
+                <li>Membangun ikatan kekeluargaan yang solid antar mahasiswa DKV Universitas Kuningan.</li>
+                <li>Menyelenggarakan kegiatan yang mampu mengasah skill teknis dan daya kritis mahasiswa di bidang desain.</li>
+                <li>Menjadi wadah aspirasi dan advokasi bagi seluruh mahasiswa DKV.</li>
+            </ol>
+        </div>
+    </div>
+
+   <div id="struktur" class="tab-content">
+    <h2 class="section-title">STRUKTUR ORGANISASI</h2>
+    
+    <div class="org-container">
+        <div class="org-group central">
+            <div class="org-box main">
+                <p class="role">KETUA UMUM</p>
+                <p class="name">FARHAN MAULANNA</p>
+            </div>
+            <div class="org-line-v"></div>
+            <div class="org-box main">
+                <p class="role">WAKIL KETUA</p>
+                <p class="name">ADITYA CAHYA PRATAMA</p>
+            </div>
+        </div>
+
+        <div class="org-line-v"></div>
+
+        <div class="org-flex-row">
+            <div class="org-col">
+                <div class="org-box secondary">
+                    <p class="role">SEKRETARIS UMUM</p>
+                    <p class="name">MONA TRI SUNDARI</p>
+                </div>
+                <div class="org-line-v-short"></div>
+                <div class="org-box secondary">
+                    <p class="role">SEKRETARIS I</p>
+                    <p class="name">SALSA TRIWANI</p>
+                </div>
+            </div>
+
+            <div class="org-col">
+                <div class="org-box secondary">
+                    <p class="role">BENDAHARA UMUM</p>
+                    <p class="name">LISTIANA DEWI N.A</p>
+                </div>
+                <div class="org-line-v-short"></div>
+                <div class="org-box secondary">
+                    <p class="role">BENDAHARA II</p>
+                    <p class="name">CUCI CAHYANI</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="org-line-v"></div>
+
+        <div class="koor-grid">
+            <div class="koor-box">
+                <p class="role">KOOR KEORGANISASIAN</p>
+                <p class="name">RIZKY PAJARUDIN</p>
+            </div>
+            <div class="koor-box">
+                <p class="role">KOOR JASMANI & ROHANI</p>
+                <p class="name">FAJAR SIDIK SETIAWAN</p>
+            </div>
+            <div class="koor-box">
+                <p class="role">KOOR KEWIRAUSAHAAN</p>
+                <p class="name">YAHYA CANDRA ATMADIN</p>
+            </div>
+            <div class="koor-box">
+                <p class="role">KOOR MEDINFO</p>
+                <p class="name">MUHAMMAD HIQBAL</p>
+            </div>
+            <div class="koor-box">
+                <p class="role">KOOR LITBANG</p>
+                <p class="name">ABDUL AKMAL FAHRUDIN</p>
+            </div>
+            <div class="koor-box">
+                <p class="role">KOOR HUMAS</p>
+                <p class="name">DZAKY ASSHAFIQ</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+   <div id="proker" class="tab-content">
+    <h2 class="proker-header">PROGRAM KERJA HIMA DKV UNIKU</h2>
+
+    <div class="proker-item">
+        <h3 class="proker-title">DKVEST</h3>
+        <p class="proker-description">
+            DKVEST merupakan festival pameran tahunan yang diselenggarakan oleh mahasiswa Desain Komunikasi Visual Universitas Kuningan. DKVEST bertujuan sebagai penyampaian ide atau gagasan kepada publik dan memberikan semangat baru melalui media karya seni rupa dan desain yang dikemas dalam bentuk pameran karya tugas mahasiswa DKV, Pameran Karya Poster, Workshop, Art Installation, Engagement, Portofolio Review, Artist Talk, dan Live Music.
+        </p>
+    </div>
+
+    <div class="proker-item">
+        <h3 class="proker-title">Community Developement</h3>
+        <p class="proker-description">
+            Menjalankan Komunitas Gambar, Desain Grafis, Fotografi & Videografi, Sidang Karya Visual. Program ini bertujuan sebagai wadah untuk mengembangkan minat dan bakat serta mengasah kreativitas; sebagai sarana informasi dan menjalin relasi mengenai minat, bakat atau hobi antar sesama anggota; sebagai sarana atau media untuk saling mendukung sesama anggota.
+        </p>
+    </div>
+
+      <div class="proker-item">
+        <h3 class="proker-title">Public relation</h3>
+        <p class="proker-description">
+            Mempererat tali silaturahmi dan membangun hubungan yang baik antara HIMA DKV Uniku dengan pihak lain, baik personal, organisasi, maupun komunitas yang ada di dalam dan di luar kampus.
+        </p>
+    </div>
+
+    <div class="proker-item">
+        <h3 class="proker-title">Makrab</h3>
+        <p class="proker-description">
+            Program ini merupakan program kaderisasi HIMA DKV Uniku yang bertujuan untuk mengeratkan tali persaudaraan antar anggota; Membina kerja sama yang baik antar sesama pengurus agar tetap terjalin dengan baik; Menciptakan keselarasan dalam lingkungan pergaulan anatra Pengurus HIMA DKV Uniku.
+        </p>
+    </div>
+
+    <div class="proker-item">
+        <h3 class="proker-title">Creativepreneurship</h3>
+        <p class="proker-description">
+            Program ini merupakan program kewirausahaan HIMA DKV Uniku yang di dalamnya meliputi kegiatan usaha berupa penyediaan alat & bahan keperluan kuliah praktik dan pembuatan merchandise. Program ini bertujuan untuk Mengembangkan dan menjalankan semua kegiatan yang berkaitan dengan kewirausahaan. Membantu meringankan tugas kuliah mahasiswa DKV dengan penyediaan alat dan bahan. Selain itu, untuk memasarkan produk-produk buatan mahasiswa DKV ke khalayak umum.
+        </p>
+    </div>
+
+     <div class="proker-item">
+        <h3 class="proker-title">Pengelolaan Media Informasi</h3>
+        <p class="proker-description">
+            Program ini berupa manajemen media sosial yang dimiliki oleh HIMA DKV Uniku dan beberapa akun media sosial khusus event tertentu yang diselenggarakan oleh HIMA DKV Uniku. Di dalamnya berisi beragam konten informasi seperti microblog, berita, dokumentasi kegiatan, pengumuman, dan informasi event terdekat.
+        </p>
+    </div>
+
+      <div class="proker-item">
+        <h3 class="proker-title">Jasmani & Rohani</h3>
+        <p class="proker-description">
+            Program ini merupakan program yang berisi kegiatan olah raga dan kerohanian. Kegiatan olah raga yang dilaksanakan berupa latihan rutin di cabang futsal dan badminton. Sedangkan kegiatan kerohanian berupa kajian rutin keislaman.
+        </p>
+    </div>
+</div>
+</section>
+
+<script>
+function openTab(tabId) {
+    // Sembunyikan semua konten
+    const contents = document.querySelectorAll('.tab-content');
+    contents.forEach(content => content.classList.remove('active'));
+    
+    // Hilangkan status active dari semua tombol
+    const tabs = document.querySelectorAll('.tab-item');
+    tabs.forEach(tab => tab.classList.remove('active'));
+    
+    // Tampilkan konten yang dipilih & aktifkan tombolnya
+    document.getElementById(tabId).classList.add('active');
+    event.currentTarget.classList.add('active');
+}
+</script>
+
+    <footer class="footer-container">
+        <div class="ig-follow-section">
+            <p>Follow Instagram HIMA DKV Uniku</p>
+            <a href="https://www.instagram.com/himadkv.uniku" class="ig-button">
+                <span class="ig-icon">📸</span> himadkv.uniku
+        </a>
+            
+        </div>
+
+        <div class="footer-details">
+            <div class="partner-logos">
+                <img src="Logo-footer.png" alt="Uniku">
+            </div>
+
+            <div class="address-box">
+                <h4>FAKULTAS ILMU KOMPUTER</h4>
+                <h4>UNIVERSITAS KUNINGAN</h4>
+                <p>Jalan Pramuka No.67, Purwawinangun,</p>
+                <p>Kecamatan Kuningan, Kabupaten</p>
+                <p>Kuningan, Jawa Barat - 45512</p>
+                <p>(0232) 875 097</p>
+                <p class="email-link">dkv@uniku.ac.id</p>
+            </div>
+
+            <div class="external-links">
+                <div class="link-item"><span>🔗</span> Website Fakultas Ilmu Komputer</div>
+                <div class="link-item"><span>🔗</span> Website Universitas Kuningan</div>
+                <div class="link-item"><span>🔗</span> Penerimaan Mahasiswa Baru (Admission)</div>
+                <div class="link-item"><span>🔗</span> LMS Hybrid</div>
+                <div class="link-item"><span>🔗</span> Student Site</div>
+                <div class="link-item"><span>🔗</span> Staff Site</div>
+                <div class="link-item"><span>🔗</span> Balong International Journal of Design</div>
+            </div>
+        </div>
+
+        <div class="bottom-copyright">
+            Hak Cipta © Universitas Kuningan | Designed by Prodi Desain Komunikasi Visual | Developed by Pusat Sistem Informasi Universitas Kuningan
+        </div>
+    </footer>
+</section>
+
 </body>
 </html>

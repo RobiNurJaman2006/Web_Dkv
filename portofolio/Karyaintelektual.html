@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karya Intelektual - DKV UNIKU</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* HERO SECTION - TEKS TENGAH & BACKGROUND BERSIH */
+        .hki-hero {
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: #ffffff;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+
+        .hki-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("../Ilustrasi Gedung Rekrtorat.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        .hki-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hki-hero-content h1 {
+            font-size: 64px;
+            color: #0b4f4a;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .hki-hero-content p {
+            font-size: 24px;
+            color: #ff7a00;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        /* TABEL DATA HKI */
+        .container {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            color: #0b4f4a;
+            font-size: 24px;
+            margin-bottom: 35px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .hki-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 80px;
+            background: white;
+        }
+
+        .hki-table th {
+            text-align: left;
+            padding: 15px;
+            color: #0b4f4a;
+            border-bottom: 2px solid #f0f0f0;
+            font-size: 14px;
+            background-color: #fafafa;
+        }
+
+        .hki-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            font-size: 13px;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .hki-table tr:hover {
+            background-color: #fcfcfc;
+        }
+
+        /* FOOTER */
+        .main-footer {
+            border-top: 1px solid #eee;
+            padding-top: 60px;
+            background-color: #fff;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto 50px;
+            padding: 0 5%;
+            gap: 30px;
+        }
+
+        .footer-col { flex: 1; }
+        .footer-logos { display: flex; gap: 10px; margin-bottom: 20px; }
+        .footer-logos img { height: 40px; }
+
+        .footer-col h3, .footer-col h4 { color: #0b4f4a; margin: 5px 0; font-size: 15px; }
+        .footer-col p { font-size: 13px; color: #0b4f4a; line-height: 1.6; }
+
+        .footer-links { list-style: none; padding: 0; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { color: #0b4f4a; text-decoration: none; font-size: 14px; }
+        
+        .footer-social { display: flex; gap: 15px; justify-content: flex-end; }
+        .footer-social a { color: #0b4f4a; font-size: 20px; }
+
+        .copyright-bar {
+            background-color: #0b4f4a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hki-hero">
+        <div class="hki-hero-content">
+            <h1>Kekayaan Intelektual</h1>
+            <p>HKI Mahasiswa & Dosen</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">Daftar Hak Cipta Mahasiswa & Dosen DKV Uniku</h2>
+        
+        <div class="table-wrapper">
+            <table class="hki-table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th style="width: 30%;">Judul</th>
+                        <th>Jenis</th>
+                        <th>No. Permohonan</th>
+                        <th>Tanggal</th>
+                        <th>Pencipta</th>
+                        <th>Pemegang</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td><strong>Kasih 1</strong></td><td>Seni Lukis</td><td>EC00202022973</td><td>15/07/2020</td><td>Jerry Dounald Rahajaan</td><td>Pushaki UNIKU</td></tr>
+                    <tr><td>2</td><td><strong>Mr.Doodle</strong></td><td>Seni Ilustrasi</td><td>EC00202022965</td><td>15/07/2020</td><td>Rika Nugraha</td><td>Pushaki UNIKU</td></tr>
+                    <tr><td>3</td><td><strong>Cool Emotion</strong></td><td>Fotografi</td><td>EC00202023109</td><td>16/07/2020</td><td>Sigit Setya Kusuma</td><td>Pushaki UNIKU</td></tr>
+                    <tr><td>4</td><td><strong>Kasih 2</strong></td><td>Seni Lukis</td><td>EC00202023741</td><td>20/07/2020</td><td>Jerry Dounald Rahajaan</td><td>Pushaki UNIKU</td></tr>
+                    <tr><td>5</td><td><strong>Old Man</strong></td><td>Seni Ilustrasi</td><td>EC00202023755</td><td>20/07/2020</td><td>Rika Nugraha</td><td>Pushaki UNIKU</td></tr>
+                    <tr><td>6</td><td><strong>Ilmu</strong></td><td>Karya Rekaman Video</td><td>EC00202024209</td><td>23/07/2020</td><td>Yulyanto</td><td>Pushaki UNIKU</td></tr>
+                    <tr><td>7</td><td><strong>Woman In The Dark</strong></td><td>Fotografi</td><td>EC00202024183</td><td>23/07/2020</td><td>Sigit Setya Kusuma</td><td>Pushaki UNIKU</td></tr>
+                    <tr><td>8</td><td><strong>Design Analysis of Mountoya Bottled Water</strong></td><td>Artikel</td><td>EC00202025102</td><td>29/07/2020</td><td>Elin Herlina</td><td>Pushaki UNIKU</td></tr>
+                    <tr><td>9</td><td><strong>Mask</strong></td><td>Seni Ilustrasi</td><td>EC00202025115</td><td>29/07/2020</td><td>Rika Nugraha</td><td>Pushaki UNIKU</td></tr>
+                    <tr><td>10</td><td><strong>Bijak Menggunakan Media Sosial Untuk Indonesia Yang Lebih Baik</strong></td><td>Karya Rekaman Video</td><td>EC00202025315</td><td>30/07/2020</td><td>Yulyanto</td><td>Pushaki UNIKU</td></tr>
+                    <tr><td>11</td><td><strong>Batik Tulis Paseban dalam Makna Visual</strong></td><td>Buku</td><td>EC00202051630</td><td>20/11/2020</td><td>Rika Nugraha</td><td>Pencipta</td></tr>
+                    <tr><td>12</td><td><strong>Tirta & Yahsa</strong></td><td>Film Kartun</td><td>EC00202240599</td><td>29/06/2022</td><td>Muhamad Abi Rasul, Rika Nugraha, Yulyanto</td><td>Pushaki UNIKU</td></tr>
+                    <tr><td>13</td><td><strong>Tigres Akhir</strong></td><td>Seni Gambar</td><td>EC00202252200</td><td>10/08/2022</td><td>Azhar Natsir Ahdiyat</td><td>Pushaki UNIKU</td></tr>
+                    <tr><td>14</td><td><strong>Ikan Dewa</strong></td><td>Seni Ilustrasi</td><td>EC002022112856</td><td>26/12/2022</td><td>Rika Nugraha</td><td>Pushaki UNIKU</td></tr>
+                    <tr><td>15</td><td><strong>Independence Kartini</strong></td><td>Seni Ilustrasi</td><td>EC002022112871</td><td>26/12/2022</td><td>Rika Nugraha</td><td>Pushaki UNIKU</td></tr>
+                    <tr><td>16</td><td><strong>Produk Rumah Etnik Store</strong></td><td>Desain Poster</td><td>EC00202311648</td><td>08/02/2023</td><td>Laksmita Ayu Mirati, dkk.</td><td>Pencipta</td></tr>
+                    <tr><td>17</td><td><strong>Sistem Informasi Promosi Berbasis Web Pada Coffe Benz</strong></td><td>Program Komputer</td><td>EC00202311615</td><td>08/02/2023</td><td>Yulyanto</td><td>Pencipta</td></tr>
+                    <tr><td>18</td><td><strong>Maskot Sebagai Identitas Visual Dinas Sosial Kuningan</strong></td><td>Seni Ilustrasi</td><td>EC00202311664</td><td>08/02/2023</td><td>Siti Masrahati, dkk.</td><td>Pencipta</td></tr>
+                    <tr><td>19</td><td><strong>Aplikasi Pemesanan Melalui QR Code Berbasis WEB</strong></td><td>Program Komputer</td><td>EC00202312059</td><td>09/02/2023</td><td>Yulyanto</td><td>Pencipta</td></tr>
+                    <tr><td>20</td><td><strong>Aplikasi Sistem Inventori Berbasis Web</strong></td><td>Program Komputer</td><td>EC00202312009</td><td>09/02/2023</td><td>Elin Herlina, dkk.</td><td>Pencipta</td></tr>
+                    <tr><td>21</td><td><strong>Desain Poster Marshal Futsal Center</strong></td><td>Desain Poster</td><td>EC00202312022</td><td>09/02/2023</td><td>Agung Ismayana, dkk.</td><td>Pencipta</td></tr>
+                    <tr><td>22</td><td><strong>The Crow Lady</strong></td><td>Seni Ilustrasi</td><td>EC00202311790</td><td>09/02/2023</td><td>Geral Dwi Cahyo, dkk.</td><td>Pencipta</td></tr>
+                    <tr><td>23</td><td><strong>Ilustrasi Promosi Kopi Roemah Kesambi</strong></td><td>Seni Ilustrasi</td><td>EC00202312524</td><td>10/02/2023</td><td>Haura Zakiyyah Uzma, dkk.</td><td>Pencipta</td></tr>
+                    <tr><td>24</td><td><strong>Infografis Registrasi Aplikasi Digitren</strong></td><td>Desain Poster</td><td>EC00202312268</td><td>10/02/2023</td><td>Intan Nurazizah, dkk.</td><td>Pencipta</td></tr>
+                    <tr><td>25</td><td><strong>Katalog Rumah PT.Tanganketiga Ruang Indonesia</strong></td><td>Brosur</td><td>EC00202312284</td><td>10/02/2023</td><td>Meylani Maudi Cyntia, dkk.</td><td>Pencipta</td></tr>
+                    <tr><td>26</td><td><strong>Media Promosi Z&J Bakery</strong></td><td>Desain Banner</td><td>EC00202313924</td><td>15/02/2023</td><td>Lathifah Nur Rahya, dkk.</td><td>Pencipta</td></tr>
+                    <tr><td>27</td><td><strong>Indonesia Darurat Sampah Plastik</strong></td><td>Desain Poster</td><td>EC00202316322</td><td>23/02/2023</td><td>Jerry Dounald Rahajaan, dkk.</td><td>Pencipta</td></tr>
+                    <tr><td>28</td><td><strong>Seni Desain dan Media Dalam Perspektif Komunikasi Visual</strong></td><td>Buku</td><td>EC00202355243</td><td>14/07/2023</td><td>Azhar Natsir Ahdiyat, dkk.</td><td>Pencipta</td></tr>
+                    <tr><td>29</td><td><strong>Misi Pelangi Biru</strong></td><td>Film Kartun</td><td>EC00202376280</td><td>04/09/2023</td><td>Diandra Mauludin, dkk.</td><td>Pencipta</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="footer-logos">
+                    <img src="logouniku-removebg-preview.png" alt="Uniku">
+                    <img src="logo fkom transparan.png" alt="FKOM">
+                    <img src="WhatsApp_Image_2026-01-17_at_16.11.57__1_-removebg-preview.png" alt="DKV">
+                </div>
+                <h3>FAKULTAS ILMU KOMPUTER</h3>
+                <h4>UNIVERSITAS KUNINGAN</h4>
+                <p>Jalan Pramuka No.67, Kuningan, Jawa Barat – 45512</p>
+            </div>
+            <div class="footer-col" style="text-align: center;">
+                <ul class="footer-links">
+                    <li><a href="#">Website Universitas Kuningan</a></li>
+                    <li><a href="#">LMS Hybrid</a></li>
+                    <li><a href="#">Student Site</a></li>
+                    <li><a href="#">Balong Journal of Design</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-bar">
+            Hak Cipta © Universitas Kuningan | Designed by Prodi DKV UNIKU
+        </div>
+    </footer>
+
+</body>
+</html>

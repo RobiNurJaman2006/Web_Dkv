@@ -1,0 +1,167 @@
+/* ================= ROOT THEME ================= */
+:root {
+  --primary: #0f766e;
+  --secondary: #f97316;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --input: #ffffff;
+}
+
+/* ================= DARK MODE VARIABLE ================= */
+body.dark {
+  --bg: #020617;
+  --card: #020617;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --border: #1e293b;
+  --input: #020617;
+}
+
+/* ================= GLOBAL ================= */
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+  transition: 0.3s ease;
+}
+
+/* ================= CARD ================= */
+.container-card {
+  width: 100%;
+  max-width: 900px;
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.92),
+      rgba(255, 255, 255, 0.92)
+    ),
+    url("WhatsApp Image 2026-01-09 at 14.16.30.jpeg")
+      center / cover no-repeat;
+
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px;
+}
+
+/* DARK CARD */
+body.dark .container-card {
+  background:
+  
+    linear-gradient(
+      rgba(2, 6, 23, 0.92),
+      rgba(2, 6, 23, 0.92)
+    ),
+    
+    url("WhatsApp Image 2026-01-09 at 14.16.30.jpeg")
+      center / cover no-repeat;
+}
+
+/* ================= LOGO ================= */
+.logo-uniku {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.08);
+  padding: 16px;
+}
+
+body.dark .logo-uniku {
+  --bg: #020617;
+  --card: #020617;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --border: #1e293b;
+  --input: #020617;
+}
+
+/* ================= HEADER ================= */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.header p {
+  color: var(--muted);
+}
+
+/* ================= FORM ================= */
+.form-control,
+.form-select {
+  background: var(--input);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 10px;
+}
+
+body.dark .form-control,
+body.dark .form-select {
+  color: #f8fafc;
+}
+
+body.dark .form-control::placeholder {
+  color: #94a3b8;
+}
+
+/* ================= BUTTON ================= */
+.btn-primary-custom {
+  background: var(--secondary);
+  border: none;
+  padding: 14px;
+  font-weight: 600;
+  border-radius: 12px;
+  color: #fff;
+  width: 100%;
+}
+
+/* ================= TABLE FIX ================= */
+.table {
+  background: var(--card);
+  color: var(--text);
+}
+
+.table th,
+.table td {
+  background: transparent !important;
+  color: inherit;
+  border-color: var(--border);
+}
+
+.table thead {
+  background: var(--primary);
+  color: #fff;
+}
+
+body.dark .table {
+  background: #020617;
+}
+
+body.dark .table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* ================= TOGGLE DARK MODE (FIXED) ================= */
+.toggle-theme {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}

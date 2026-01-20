@@ -1,121 +1,88 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>event | DKV UNIKU</title>
-  <link rel="stylesheet" href="event.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event - DKV UNIKU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="event.css">
 </head>
 <body>
 
-    <header>
-        <div class="container nav-container">
-            <div class="logo">
-                <img src="https://via.placeholder.com/80x30?text=DKV" alt="DKV Logo">
-            </div>
-            <div class="menu-btn">
-                <div class="hamburger"><span></span><span></span><span></span></div>
-                Menu
-            </div>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="WhatsApp_Image_2026-01-17_at_16.11.57-removebg-preview (1).png" alt="Logo DKV">
+        </div>
+      
+    </nav>
+
+    <header class="hero-testimoni">
+        <div class="overlay"></div>
+        <div class="hero-text">
+            <h1>Event</h1>
+            <p>DKV Uniku</p>
         </div>
     </header>
 
-    <section class="hero-event">
-        <div class="container">
-            <div class="share-icons">
-                <span>Share this list:</span>
-                <i class="fab fa-whatsapp"></i>
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-x-twitter"></i>
-                <i class="far fa-envelope"></i>
-                <i class="fas fa-share-alt"></i>
-            </div>
-            <h1>Event</h1>
-            <p class="yellow-text">DKV Uniku</p>
-        </div>
-    </section>
-
-    <section class="filters container">
-        <input type="text" placeholder="Keywords">
-        <input type="text" placeholder="Location">
-        <select><option>Select Date Range</option></select>
-        <select><option>Choose an Event Category</option></select>
-        <select><option>Choose an Event Type</option></select>
-    </section>
-
-    <main class="container">
-        <h2 class="section-title">Events</h2>
-        <div class="view-toggle">
-            <button class="active"><i class="fas fa-th-large"></i></button>
-            <button><i class="fas fa-list"></i></button>
-        </div>
-
-        <div class="event-grid">
-            <article class="event-card">
-                <div class="image-container">
-                    <img src="https://dkv.uniku.ac.id/event/test/" alt="Event Image">
-                    <div class="date-badge">
-                        <span class="day">04</span>
-                        <span class="month">AUG</span>
-                    </div>
-                </div>
-                <div class="event-info">
+    <section class="container">
+        
+        <div class="testi-card">
+            <div class="profile-header">
+                <img src="WhatsApp Image 2026-01-20 at 17.20.55.jpeg" alt="Profile" class="profile-img">
+                <div class="profile-info">
                     <h3>Test</h3>
-                    <p><i class="far fa-clock"></i> 2023-08-04 @ 10:00 AM - 2023-08-04 @ 09:00 PM</p>
-                    <p><i class="fas fa-map-marker-alt"></i> FKOM Uniku</p>
-                    <span class="tag">Festival or Fair</span>
+                    <p class="role">2023-08-04 @ 10:00 AM - 2023-08-04 @ 09:00 PM</p>
                 </div>
-            </article>
+            </div>
+            <div class="testi-content">
+                <h4 class="orange-text"><i class="fa fa-quote-left"></i>Lokasi-FKOM Uniku</h4>
+                <p>"Festival or fire"</p>
+            </div>
+           
+        </div>
 
-            <article class="event-card">
-                <div class="image-container">
-                    <img src="https://via.placeholder.com/500x300/3498db/fff" alt="Event Image">
-                    <div class="date-badge">
-                        <span class="day">30</span>
-                        <span class="month">JAN</span>
-                    </div>
-                </div>
-                <div class="event-info">
+        <div class="testi-card">
+            <div class="profile-header">
+                <img src="WhatsApp Image 2026-01-20 at 17.20.49.jpeg" alt="Profile" class="profile-img">
+                <div class="profile-info">
                     <h3>Test Event</h3>
-                    <p><i class="far fa-clock"></i> 2023-01-30 - 2023-01-31</p>
-                    <p><i class="fas fa-map-marker-alt"></i> -</p>
+                    <p class="role">2023-01-30-2023-01-31</p>
                 </div>
-            </article>
-        </div>
-
-        <h2 class="section-title" style="margin-top: 50px;">Past Events</h2>
-        </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-top-logos">
-                <img src="https://via.placeholder.com/40x40" alt="UNIKU">
-                <img src="https://via.placeholder.com/80x40" alt="FKOM">
-                <img src="https://via.placeholder.com/40x40" alt="DKV">
             </div>
-            
-            <div class="footer-address">
-                <h4>FAKULTAS ILMU KOMPUTER<br>UNIVERSITAS KUNINGAN</h4>
-                <p>Jalan Pramuka No.67, Purwawinangun,<br>Kecamatan Kuningan, Kabupaten<br>Kuningan, Jawa Barat - 45512</p>
-                <p>(0232) 875 087</p>
-                <p>dkv@uniku.ac.id</p>
+            <div class="testi-content">
+                <h4 class="orange-text"><i class="fa fa-quote-left"></i> -</h4>
+                <p></p>
             </div>
-
-            <div class="footer-links">
-                <a href="#"><i class="fas fa-external-link-alt"></i> Website Fakultas Ilmu Komputer</a>
-                <a href="#">Website Universitas Kuningan</a>
-                <a href="#">Penerimaan Mahasiswa Baru (Admission)</a>
-                <a href="#">LMS Hybrid</a>
-                <a href="#">Student Site</a>
-            </div>
-
-            <div class="social-icons">
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-youtube"></i>
-                <i class="fab fa-whatsapp"></i>
+           
             </div>
         </div>
-        <div class="copyright">
-            Hak Cipta © Universitas Kuningan | Designed by Prodi DKV
+
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-logos">
+            <img src="WhatsApp Image 2026-01-20 at 17.20.56.jpeg" alt="FKOM">
+        
+        </div>
+        <div class="footer-info">
+            <p><strong>FAKULTAS ILMU KOMPUTER</strong></p>
+            <p><strong>UNIVERSITAS KUNINGAN</strong></p>
+            <p>Jalan Cut Nyak Dhien No. 36 Cijoho, Kuningan</p>
+            <p>Kec. Kuningan, Kabupaten Kuningan</p>
+            <p>Jawa Barat, Indonesia - 45513</p>
+            <p>(0232) 874 085</p>
+            <p>fkom@uniku.ac.id</p>
+        </div>
+        <div class="footer-links">
+            <a href="#"><i class="fa fa-external-link-alt"></i> Website Pusat Uniku</a>
+            <a href="#">Sistem Informasi Akademik</a>
+            <a href="#">E-Learning</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
         </div>
     </footer>
 
