@@ -131,111 +131,83 @@ nav ul li a:hover, nav ul li a.active { color: var(--uniku-orange); }
     animation: smoothFadeUp 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
     animation-delay: 0.8s;
 }
+/*ini logo gedung*/
 
-/*logo belakang gedung*/
-
-
-/* 5. MAIN LAYOUT */
-.main-content { 
-    display: grid; 
-    grid-template-columns: 1fr 320px; 
-    gap: 50px; 
-    padding: 60px 0; 
+/* --- VISI & MISI STYLING --- */
+.main-content-visi {
+    padding: 80px 20px;
 }
 
-.section-title {
-    color: var(--uniku-teal); 
-    font-family: 'Montserrat', sans-serif;
-    margin: 30px 0 15px; 
-    border-bottom: 3px solid var(--uniku-teal);
-    display: inline-block; 
-    padding-bottom: 5px;
-}
-
-/* 6. KONTEN GAMBAR & AKREDITASI */
-.img-content {
-    width: 100%;
-    max-width: 100%; 
-    height: auto;
-    display: block;
-    margin: 20px 0;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.akreditasi-img-wrapper img {
-    max-width: 350px;
-    height: auto;
-}
-
-/* 7. SIDEBAR & ACCORDION */
-.sidebar-right {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.info-box {
-    background-color: var(--bg-light);
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #eee;
-}
-
-.accordion-item {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 5px;
-}
-
-.accordion-btn {
-    width: 100%;
-    background: none;
-    border: none;
-    text-align: left;
-    padding: 12px 0;
-    font-weight: 600;
-    color: var(--uniku-teal);
-    cursor: pointer;
+.visi-container {
     display: flex;
     align-items: center;
-    font-size: 15px;
-    transition: 0.3s ease;
+    gap: 60px;
+    margin-bottom: 100px;
+    /* Animasi muncul dari samping */
+    animation: smoothFadeUp 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.accordion-btn.active { color: var(--uniku-orange); }
-
-.arrow {
-    margin-right: 12px;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    font-size: 12px;
+.visi-icon-wrapper {
+    flex-shrink: 0;
+    position: relative;
 }
 
-.accordion-btn.active .arrow {
-    transform: rotate(90deg);
+.visi-icon {
+    width: 350px; /* Ukuran besar sesuai gambar referensi */
+    height: auto;
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.1));
 }
 
-.accordion-content {
-    max-height: 0; 
-    overflow: hidden;
-    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
-    background-color: #fff;
+.title-orange {
+    color: var(--uniku-orange); /* Oranye sesuai brand */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 20px;
 }
 
-.accordion-content p {
-    padding: 15px;
-    margin: 0;
-    font-size: 14px;
-    border-left: 3px solid var(--uniku-orange);
+.visi-text-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-gray);
+    text-align: justify;
 }
 
-.side-images img { 
-    width: 100%; 
-    margin-top: 15px; 
-    border-radius: 12px; 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08); 
-    transition: transform 0.3s ease;
+/* Styling Misi */
+.misi-item {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 30px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--uniku-teal);
+    transition: 0.3s;
 }
-.side-images img:hover { transform: scale(1.02); }
+
+.misi-item:hover {
+    transform: translateX(10px);
+    border-left-color: var(--uniku-orange);
+}
+
+.misi-number {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    color: var(--uniku-teal);
+}
+
+/* Responsif Mobile */
+@media (max-width: 992px) {
+    .visi-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .visi-icon { width: 250px; }
+    .visi-text-content p { text-align: center; }
+}
+
 
 /* bagian akhir*/
 /* ============================= */
