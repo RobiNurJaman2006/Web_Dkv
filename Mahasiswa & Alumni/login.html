@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login DKV UNIKU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="form-section">
+    <div class="form-card">
+        <div class="logo-container">
+            <img src="logo-dkv.png" alt="Logo" class="logo-circle">
+        </div>
+
+        <h1>Login</h1>
+        <div class="sub-title">Alumni DKV</div>
+        
+        <div class="input-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" placeholder="Masukkan Nama Lengkap Anda" required>
+            
+            <label for="nim">NIM</label>
+            <input type="text" id="nim" placeholder="Masukkan NIM lengkap anda" required>
+        </div>
+
+        <p id="error-msg">Nama atau NIM tidak terdaftar!</p>
+
+        <button id="login-btn" onclick="prosesLogin()">
+            Daftar <span class="arrow">↗</span>
+        </button>
+    </div>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>

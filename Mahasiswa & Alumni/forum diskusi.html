@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Diskusi DKV</title>
+    <link rel="stylesheet" href="forum diskusi.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-background"></div>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Forum Diskusi DKV</h1>
+            <p>Eksplorasi ide, warna, dan imajinasi tanpa batas.</p>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <article class="glass-card fade-in">
+            <div class="post-header">
+                <div class="avatar-circle">KELUARGA ALUMNI DKV UNIVERSITAS KUNINGAN</div>
+                
+        </article>
+
+        <section class="glass-card fade-in delay-1">
+            <h3>Diskusi ( <span id="comment-count">0</span> )</h3>
+            <div id="comment-list" class="comment-container">
+                </div>
+
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Nama Anda...">
+                <textarea id="comment-text" placeholder="Tuliskan pendapat kreatifmu..."></textarea>
+                <button class="btn-creative" onclick="tambahKomentar()">
+                    <span>Kirim Komentar</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="forum diskusi.js"></script>
+</body>
+</html>

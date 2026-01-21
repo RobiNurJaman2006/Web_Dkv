@@ -11,7 +11,7 @@ function loadData() {
       let html = "";
 
       if (!data || data.length === 0) {
-        html = `<tr><td colspan="7" class="text-center">Data kosong</td></tr>`;
+        html = <tr><td colspan="7" class="text-center">Data kosong</td></tr>;
       } else {
         data.forEach((a) => {
           html += `<tr>
@@ -24,7 +24,7 @@ function loadData() {
             <td>
               ${
                 a.portfolio
-                  ? `<a href="${a.portfolio}" target="_blank">Lihat</a>`
+                  ? <a href="${a.portfolio}" target="_blank">Lihat</a>
                   : ""
               }
             </td>
@@ -36,7 +36,7 @@ function loadData() {
     })
     .fail(function () {
       $("#alumniTableBody").html(
-        `<tr><td colspan="7" class="text-danger text-center">Gagal memuat data</td></tr>`
+        <tr><td colspan="7" class="text-danger text-center">Gagal memuat data</td></tr>
       );
     });
 }
