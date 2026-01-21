@@ -3,39 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forum Diskusi DKV</title>
+    <title>Forum Alumni DKV UNIKU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="forum diskusi.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="main-background"></div>
+    <div class="bg-fixed"></div>
 
     <header class="hero">
-        <div class="hero-content">
-            <h1>Forum Diskusi DKV</h1>
-            <p>Eksplorasi ide, warna, dan imajinasi tanpa batas.</p>
+        <div class="hero-content fade-in">
+            <span class="sub-title">RUANG DISKUSI</span>
+            <h1>Keluarga Alumni DKV<br>Universitas Kuningan</h1>
+            <p>Berbagi inspirasi, kolaborasi, dan karya visual.</p>
         </div>
     </header>
 
-    <main class="content-wrapper">
-        <article class="glass-card fade-in">
+    <main class="container">
+        <article class="glass-card fade-in delay-1">
             <div class="post-header">
-                <div class="avatar-circle">KELUARGA ALUMNI DKV UNIVERSITAS KUNINGAN</div>
-                
+                <div class="avatar-box">AD</div>
+                <div class="user-meta">
+                    <strong>Admin DKV</strong>
+                    <span>Diterbitkan hari ini</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <h2>Arah Desain Komunikasi Visual di Era AI</h2>
+                <p>Bagaimana pendapat rekan-rekan alumni mengenai integrasi tools AI dalam workflow desain kita saat ini? Apakah mengancam kreativitas atau justru membantu?</p>
+            </div>
+
+            <div class="post-tags">
+                <span class="tag">#DiskusiAlumni</span>
+                <span class="tag">#DKVUNIKU</span>
+            </div>
         </article>
 
-        <section class="glass-card fade-in delay-1">
-            <h3>Diskusi ( <span id="comment-count">0</span> )</h3>
-            <div id="comment-list" class="comment-container">
+        <section class="glass-card fade-in delay-2">
+            <h3 class="section-title">Diskusi ( <span id="comment-count">0</span> )</h3>
+            
+            <div id="comment-list" class="comment-feed">
                 </div>
 
-            <div class="input-group">
-                <input type="text" id="username" placeholder="Nama Anda...">
-                <textarea id="comment-text" placeholder="Tuliskan pendapat kreatifmu..."></textarea>
-                <button class="btn-creative" onclick="tambahKomentar()">
-                    <span>Kirim Komentar</span>
-                </button>
+            <div class="form-wrapper">
+                <h4>Sampaikan Aspirasimu</h4>
+                <div class="input-container">
+                    <input type="text" id="username" placeholder="Nama Lengkap">
+                    <textarea id="comment-text" rows="4" placeholder="Tulis pendapat atau ide kamu..."></textarea>
+                    <button class="btn-primary" onclick="tambahKomentar()">
+                        Kirim Komentar
+                    </button>
+                </div>
             </div>
         </section>
     </main>

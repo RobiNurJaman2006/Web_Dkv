@@ -1,167 +1,158 @@
-/* ================= ROOT THEME ================= */
+/* ================= ROOT THEME & COLORS ================= */
 :root {
   --primary: #0f766e;
+  --primary-dark: #0d5e58;
   --secondary: #f97316;
-  --bg: #f8fafc;
-  --card: #ffffff;
-  --text: #0f172a;
-  --muted: #64748b;
-  --border: #e2e8f0;
-  --input: #ffffff;
+  /* Warna Abu-abu Lembut untuk Background dan Card */
+  --bg-color: #e2e8f0; 
+  --card-bg: rgba(241, 245, 249, 0.96); 
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #cbd5e1;
+  --input-bg: #f8fafc;
 }
 
-/* ================= DARK MODE VARIABLE ================= */
+/* ================= DARK MODE ================= */
 body.dark {
-  --bg: #020617;
-  --card: #020617;
-  --text: #f8fafc;
-  --muted: #94a3b8;
-  --border: #1e293b;
-  --input: #020617;
+  --bg-color: #0f172a;
+  --card-bg: rgba(30, 41, 59, 0.98);
+  --text-main: #f1f5f9;
+  --border-color: #334155;
+  --input-bg: #1e293b;
 }
 
-/* ================= GLOBAL ================= */
+/* ================= GLOBAL STYLES ================= */
 body {
-  font-family: "Inter", sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  padding: 40px 16px;
-  transition: 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  margin: 0;
+  padding: 40px 15px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  /* Tambahkan Background Gambar jika diperlukan */
+  background-image: linear-gradient(rgba(226, 232, 240, 0.8), rgba(226, 232, 240, 0.8)), url('gedung.jpeg');
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-/* ================= CARD ================= */
 .container-card {
-  width: 100%;
-  max-width: 900px;
-  background:
-    linear-gradient(
-      rgba(255, 255, 255, 0.92),
-      rgba(255, 255, 255, 0.92)
-    ),
-    url("WhatsApp Image 2026-01-09 at 14.16.30.jpeg")
-      center / cover no-repeat;
-
-  border: 1px solid var(--border);
-  border-radius: 16px;
+  max-width: 950px;
+  margin: auto;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 24px;
   padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+  animation: slideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* DARK CARD */
-body.dark .container-card {
-  background:
-  
-    linear-gradient(
-      rgba(2, 6, 23, 0.92),
-      rgba(2, 6, 23, 0.92)
-    ),
-    
-    url("WhatsApp Image 2026-01-09 at 14.16.30.jpeg")
-      center / cover no-repeat;
-}
+/* ================= HEADER & LOGO ================= */
+.header { text-align: center; margin-bottom: 40px; }
 
-/* ================= LOGO ================= */
-.logo-uniku {
-  width: 120px;
-  height: 120px;
+.logo-wrapper {
+  background: white;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 15px;
   border-radius: 50%;
-  background: rgba(15, 23, 42, 0.08);
-  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-body.dark .logo-uniku {
-  --bg: #020617;
-  --card: #020617;
-  --text: #f8fafc;
-  --muted: #94a3b8;
-  --border: #1e293b;
-  --input: #020617;
-}
-
-/* ================= HEADER ================= */
-.header {
-  text-align: center;
-  margin-bottom: 40px;
-}
+.logo-uniku { width: 65px; height: auto; }
 
 .header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
   font-weight: 700;
   color: var(--primary);
+  margin-bottom: 5px;
 }
 
-.header p {
-  color: var(--muted);
+.subtitle { color: var(--text-muted); font-size: 14px; line-height: 1.5; }
+
+/* ================= FORM ELEMENTS ================= */
+.form-label { font-weight: 600; font-size: 13px; margin-bottom: 8px; color: var(--text-main); }
+
+.form-control, .form-select {
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 12px 15px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
 }
 
-/* ================= FORM ================= */
-.form-control,
-.form-select {
-  background: var(--input);
-  border: 1px solid var(--border);
-  color: var(--text);
-  border-radius: 10px;
-}
-
-body.dark .form-control,
-body.dark .form-select {
-  color: #f8fafc;
-}
-
-body.dark .form-control::placeholder {
-  color: #94a3b8;
+.form-control:focus, .form-select:focus {
+  background-color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.1);
+  transform: translateY(-1px);
 }
 
 /* ================= BUTTON ================= */
 .btn-primary-custom {
-  background: var(--secondary);
+  background: linear-gradient(135deg, var(--secondary), #fb923c);
+  color: white;
   border: none;
-  padding: 14px;
-  font-weight: 600;
+  padding: 15px;
   border-radius: 12px;
-  color: #fff;
+  font-weight: 700;
   width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 15px rgba(249, 115, 22, 0.2);
 }
 
-/* ================= TABLE FIX ================= */
-.table {
-  background: var(--card);
-  color: var(--text);
+.btn-primary-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(249, 115, 22, 0.3);
+  filter: brightness(1.05);
 }
 
-.table th,
-.table td {
-  background: transparent !important;
-  color: inherit;
-  border-color: var(--border);
+.btn-primary-custom:active { transform: translateY(0); }
+
+/* ================= TABLE & SEARCH ================= */
+.section-divider {
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  line-height: 0.1em;
+  margin: 50px 0 30px;
 }
 
-.table thead {
-  background: var(--primary);
-  color: #fff;
+.section-divider span { background: var(--card-bg); padding: 0 15px; font-weight: 700; color: var(--text-muted); }
+
+.custom-table-container { 
+  border-radius: 15px; 
+  overflow: hidden; 
+  border: 1px solid var(--border-color); 
+  background: rgba(255,255,255,0.3);
 }
 
-body.dark .table {
-  background: #020617;
+.table { margin-bottom: 0; }
+.table thead { background-color: var(--primary); color: white; }
+.table th { border: none; padding: 15px; font-size: 12px; text-transform: uppercase; }
+.table td { border-bottom: 1px solid var(--border-color); padding: 15px; font-size: 14px; }
+
+/* ================= ANIMATIONS ================= */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-body.dark .table tbody tr:hover {
-  background: rgba(255, 255, 255, 0.04);
-}
-
-/* ================= TOGGLE DARK MODE (FIXED) ================= */
 .toggle-theme {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 9999;
-
-  background: var(--card);
-  border: 1px solid var(--border);
+  top: 20px; right: 20px;
+  background: var(--primary);
+  color: white;
+  padding: 10px 18px;
   border-radius: 50px;
-  padding: 8px 14px;
   cursor: pointer;
-  font-size: 0.9rem;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
