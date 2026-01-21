@@ -4,30 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login DKV UNIKU</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!--dipakai supaya tampilan lebih modern-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-
+<!--Struktur Utama Halaman Login-->
 <div class="form-section">
     <div class="form-card">
         <div class="logo-container">
             <img src="logo hitam.png" alt="Logo" class="logo-circle">
         </div>
 
+        <!--Memberi informasi bahwa halaman ini adalah halaman login-->
         <h1>Login</h1>
         <div class="sub-title">Alumni DKV</div>
         
         <div class="input-group">
-            <label for="nama">Nama Lengkap</label>
-            <input type="text" id="nama" placeholder="Masukkan Nama Lengkap Anda" required>
+            <label for="nama">Nama Lengkap</label><!--keterangan input-->
+            <input type="text" id="nama" placeholder="Masukkan Nama Lengkap Anda" required><!--penting supaya bisa dipanggil oleh JavaScript-->
             
             <label for="nim">NIM</label>
             <input type="text" id="nim" placeholder="Masukkan NIM lengkap anda" required>
-        </div>
+        </div><!--mencegah input kosong-->
 
         <p id="error-msg">Nama atau NIM tidak terdaftar!</p>
-
+                                        <!--menjalankan fungsi-->
         <button id="login-btn" onclick="prosesLogin()">
             Daftar <span class="arrow">↗</span>
         </button>
