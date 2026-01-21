@@ -3,54 +3,350 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tracer Study | DKV UNIKU</title>
-    <link rel="stylesheet" href="../style.css"> <style>
-        .tracer-container {
-            padding: 150px 64px 100px;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
+    <title>Tracer Study DKV UNIKU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #005d52;
+            --primary-dark: #003d36;
+            --accent: #f39c12;
+            --glass: rgba(255, 255, 255, 0.94);
         }
-        .tracer-card {
-            background: #fff;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-            border-top: 5px solid #ff7a00;
+
+        body {
+            background: linear-gradient(rgba(0, 93, 82, 0.2), rgba(0, 93, 82, 0.2)), 
+                        url('https://www.uniku.ac.id/wp-content/uploads/2021/01/gedung-rektorat.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #1a202c;
+            min-height: 100vh;
         }
-        .tracer-card h2 {
-            color: #0b4f4a;
-            margin-bottom: 20px;
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+            border-top: 10px solid var(--primary);
         }
-        .btn-form {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 16px 40px;
-            background: linear-gradient(135deg, #0b4f4a, #ff7a00);
-            color: white;
-            text-decoration: none;
-            border-radius: 999px;
-            font-weight: 600;
-            transition: 0.3s;
+
+        input, select, textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9) !important;
+            border: 2px solid #e2e8f0 !important;
+            padding: 0.75rem 1rem !important;
+            border-radius: 12px !important;
+            transition: all 0.3s ease !important;
         }
-        .btn-form:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(255,122,0,0.3);
+
+        input:focus, select:focus {
+            border-color: var(--primary) !important;
+            box-shadow: 0 0 0 4px rgba(0, 93, 82, 0.1) !important;
+            outline: none;
         }
+
+        /* Radio & Checkbox styling fix */
+        input[type="radio"], input[type="checkbox"] {
+            width: auto !important;
+            margin-right: 0.5rem;
+        }
+
+        .step-content { display: none; opacity: 0; transform: translateY(15px); }
+        .step-content.active { display: block; animation: fadeInUp 0.5s forwards; }
+
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+
+        #progressBar {
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transition: width 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+
+        .custom-scroll::-webkit-scrollbar { width: 5px; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
     </style>
 </head>
-<body>
-    <div class="tracer-container">
-        <div class="tracer-card">
-            <h2>Tracer Study Alumni</h2>
-            <p>Halo Alumni DKV UNIKU! Mohon kesediaan waktunya untuk mengisi kuesioner pelacakan alumni guna pengembangan institusi dan program studi yang lebih baik.</p>
-            
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGUn30VfuCVtoWznDAzz_-1r9KSPjsPngs81vN3z_fIb4uNw/viewform" 
-               target="_blank" 
-               class="btn-form">
-               Buka Formulir 📋
-            </a>
+<body class="py-10 px-4">
+
+    <header class="max-w-4xl mx-auto mb-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+            <div class="text-5xl font-extrabold text-teal-900">dkv</div>
+            <div class="h-10 w-1 bg-teal-800 hidden md:block"></div>
+            <div class="text-[10px] leading-tight text-teal-900 font-bold uppercase tracking-widest">
+                Program Studi<br>Desain Komunikasi Visual<br>Universitas Kuningan
+            </div>
         </div>
-    </div>
+        <div class="text-center md:text-right">
+            <span class="text-orange-500 font-black tracking-widest text-lg">TRACER STUDY</span>
+            <div id="stepLabel" class="text-xs font-bold text-teal-800 uppercase mt-1">Halaman 1 dari 3</div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto">
+        <div class="w-full bg-white/40 rounded-full h-3 mb-8 overflow-hidden border border-white/50">
+            <div id="progressBar" style="width: 33.33%"></div>
+        </div>
+
+        <form id="tracerForm" class="glass-card p-6 md:p-12">
+            
+            <div id="step1" class="step-content active">
+                <h2 class="text-2xl font-extrabold text-teal-900 mb-8 border-b-2 border-orange-400 pb-2 inline-block">1. DATA DIRI</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="md:col-span-2">
+                        <label class="block mb-2 font-bold text-sm">Email *</label>
+                        <input type="email" id="email" placeholder="contoh@email.com" required>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block mb-2 font-bold text-sm">Nama Lengkap *</label>
+                        <input type="text" id="nama" placeholder="Sesuai Ijazah" required>
+                    </div>
+                    <div>
+                        <label class="block mb-2 font-bold text-sm">Tempat, Tanggal Lahir *</label>
+                        <input type="text" id="ttl" placeholder="Kuningan, 12 Desember 1998" required>
+                    </div>
+                    <div>
+                        <label class="block mb-2 font-bold text-sm">Jenis Kelamin *</label>
+                        <div class="flex gap-6 mt-3">
+                            <label class="flex items-center cursor-pointer"><input type="radio" name="jk" value="Laki-laki" required> Laki-laki</label>
+                            <label class="flex items-center cursor-pointer"><input type="radio" name="jk" value="Perempuan"> Perempuan</label>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block mb-2 font-bold text-sm">Alamat Lengkap *</label>
+                        <textarea id="alamat" rows="2" placeholder="Domisili saat ini" required></textarea>
+                    </div>
+                    <div>
+                        <label class="block mb-2 font-bold text-sm">Nomor WhatsApp *</label>
+                        <input type="tel" id="whatsapp" placeholder="08123456789" required>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div><label class="block mb-2 font-bold text-xs">Tahun Masuk *</label><input type="number" id="tahunMasuk" required></div>
+                        <div><label class="block mb-2 font-bold text-xs">Tahun Lulus *</label><input type="number" id="tahunLulus" required></div>
+                    </div>
+                    <div class="md:col-span-2 bg-teal-50 p-6 rounded-2xl border border-teal-200 mt-4">
+                        <label class="block mb-3 font-bold text-teal-900">Apakah sudah bergabung grup WA ALUMNI DKV? *</label>
+                        <div class="flex gap-8">
+                            <label class="flex items-center cursor-pointer"><input type="radio" name="grupWA" value="Sudah" required> Sudah</label>
+                            <label class="flex items-center cursor-pointer"><input type="radio" name="grupWA" value="Belum"> Belum</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" onclick="nextStep(2)" class="w-full mt-10 bg-teal-900 hover:bg-teal-800 text-white font-extrabold py-4 rounded-xl shadow-lg transition-all">BERIKUTNYA</button>
+            </div>
+
+            <div id="step2" class="step-content">
+                <h2 class="text-2xl font-extrabold text-teal-900 mb-8 border-b-2 border-orange-400 pb-2 inline-block">2. PEKERJAAN</h2>
+                <div class="space-y-6">
+                    <div>
+                        <label class="block mb-2 font-bold text-sm">Status Pekerjaan *</label>
+                        <select id="statusKerja" onchange="toggleLainnya('statusKerja', 'statusKerjaLainnya')" required>
+                            <option value="">-- Pilih Status --</option>
+                            <option value="Bekerja di Perusahaan/Instansi">Bekerja di Perusahaan/Instansi</option>
+                            <option value="Berwirausaha">Berwirausaha</option>
+                            <option value="Studi Lanjut">Studi Lanjut</option>
+                            <option value="Belum Bekerja">Belum Bekerja</option>
+                            <option value="Lainnya">Lainnya...</option>
+                        </select>
+                        <input type="text" id="statusKerjaLainnya" class="mt-2 hidden" placeholder="Sebutkan status pekerjaan Anda">
+                    </div>
+                    <div>
+                        <label class="block mb-2 font-bold text-sm">Sektor Pekerjaan *</label>
+                        <select id="sektor" onchange="toggleLainnya('sektor', 'sektorLainnya')" required>
+                            <option value="">-- Pilih Sektor --</option>
+                            <option value="Instansi Pemerintah">Kementrian / Instansi Pemerintah</option>
+                            <option value="BUMN">BUMN</option>
+                            <option value="Swasta">Swasta Nasional / Multinational</option>
+                            <option value="Freelancer">Freelancer</option>
+                            <option value="UMKM">UMKM / Startup</option>
+                            <option value="Lainnya">Lainnya...</option>
+                        </select>
+                        <input type="text" id="sektorLainnya" class="mt-2 hidden" placeholder="Sebutkan sektor pekerjaan Anda">
+                    </div>
+                    <div><label class="block mb-2 font-bold text-sm">Bidang Pekerjaan *</label><input type="text" id="bidang" required></div>
+                    <div>
+                        <label class="block mb-2 font-bold text-sm">Kesesuaian Bidang dengan DKV *</label>
+                        <select id="kesesuaian" required>
+                            <option value="Sesuai">Sesuai</option>
+                            <option value="Beririsan">Beririsan</option>
+                            <option value="Tidak Sesuai">Tidak Sesuai</option>
+                        </select>
+                    </div>
+                    <div><label class="block mb-2 font-bold text-sm">Nama Instansi / Perusahaan *</label><input type="text" id="namaInstansi" required></div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div><label class="block mb-2 font-bold text-sm">Jabatan Awal</label><input type="text" id="jabatanAwal"></div>
+                        <div><label class="block mb-2 font-bold text-sm">Jabatan Sekarang</label><input type="text" id="jabatanSekarang"></div>
+                    </div>
+                    <div class="flex gap-4 pt-6">
+                        <button type="button" onclick="nextStep(1)" class="w-1/3 bg-gray-200 text-gray-700 font-bold py-4 rounded-xl">KEMBALI</button>
+                        <button type="button" onclick="nextStep(3)" class="w-2/3 bg-teal-900 text-white font-bold py-4 rounded-xl">BERIKUTNYA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step3" class="step-content">
+                <h2 class="text-2xl font-extrabold text-teal-900 mb-8 border-b-2 border-orange-400 pb-2 inline-block">3. PENDIDIKAN</h2>
+                <div class="mb-8">
+                    <label class="block mb-4 font-bold text-teal-900">Mata kuliah yang pembelajarannya berguna saat ini? *</label>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-6 bg-white/60 rounded-2xl border custom-scroll h-60 overflow-y-auto text-xs">
+                        <label class="flex items-center"><input type="checkbox" name="matkul" value="Bahasa Indonesia"> Bahasa Indonesia</label>
+                        <label class="flex items-center"><input type="checkbox" name="matkul" value="Dasar Seni Rupa"> Dasar Seni Rupa dan Desain</label>
+                        <label class="flex items-center"><input type="checkbox" name="matkul" value="Desain Grafis"> Desain Grafis</label>
+                        <label class="flex items-center"><input type="checkbox" name="matkul" value="Fotografi Dasar"> Fotografi Dasar</label>
+                        <label class="flex items-center"><input type="checkbox" name="matkul" value="Komputer DKV"> Komputer DKV</label>
+                        <label class="flex items-center"><input type="checkbox" name="matkul" value="Tipografi"> Tipografi</label>
+                        <label class="flex items-center"><input type="checkbox" name="matkul" value="Motion Graphic"> Motion Graphic</label>
+                        <label class="flex items-center"><input type="checkbox" name="matkul" value="Branding"> DKV III (Branding)</label>
+                        <label class="flex items-center"><input type="checkbox" name="matkul" value="Audio Visual"> Audio Visual</label>
+                        <label class="flex items-center"><input type="checkbox" name="matkul" value="Videografi"> Videografi</label>
+                        <label class="flex items-center"><input type="checkbox" name="matkul" value="Cinematografi"> Cinematografi</label>
+                        <label class="flex items-center"><input type="checkbox" name="matkul" value="Copywriting"> Copywriting</label>
+                        <label class="flex items-center"><input type="checkbox" name="matkul" value="Portofolio"> Portofolio</label>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <label class="block mb-4 font-bold text-teal-900">Penilaian Penyelenggaraan Pendidikan (1-5) *</label>
+                    <div class="overflow-x-auto rounded-xl border">
+                        <table class="w-full text-xs text-left">
+                            <thead class="bg-teal-900 text-white">
+                                <tr>
+                                    <th class="p-4">Aspek Penilaian</th>
+                                    <th class="p-4 text-center">1</th><th class="p-4 text-center">2</th><th class="p-4 text-center">3</th><th class="p-4 text-center">4</th><th class="p-4 text-center">5</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ratingContainer"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <button type="button" onclick="nextStep(2)" class="w-1/3 bg-gray-200 text-gray-700 font-bold py-4 rounded-xl">KEMBALI</button>
+                    <button type="submit" id="submitBtn" class="w-2/3 bg-orange-600 text-white font-black py-4 rounded-xl shadow-xl hover:bg-orange-700 transition-all">KIRIM RESPONS</button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwTr82Vq4Tc1KV55DXWtfou7SLLUspUHw78I4LMD3z72iMOMokpWnQBwh2-a3i79vfc/exec';
+        const form = document.getElementById('tracerForm');
+
+        // Render Aspek Penilaian
+        const aspek = ["Kegiatan akademik", "Kompetensi dosen", "Pelayanan dosen", "Mata kuliah teori", "Mata kuliah praktik", "Kualitas pembelajaran", "Sarana prasarana"];
+        const container = document.getElementById('ratingContainer');
+        aspek.forEach((item, idx) => {
+            const row = document.createElement('tr');
+            row.className = "border-b bg-white/50";
+            row.innerHTML = `
+                <td class="p-4 font-bold">${item}</td>
+                ${[1, 2, 3, 4, 5].map(i => `<td class="text-center p-4"><input type="radio" name="rate_${idx}" value="${i}" required></td>`).join('')}
+            `;
+            container.appendChild(row);
+        });
+
+        function toggleLainnya(selectId, inputId) {
+            const select = document.getElementById(selectId);
+            const input = document.getElementById(inputId);
+            if(select.value === 'Lainnya') { 
+                input.classList.remove('hidden'); 
+                input.required = true; 
+            } else { 
+                input.classList.add('hidden'); 
+                input.required = false; 
+            }
+        }
+
+        function nextStep(step) {
+            // Validasi langkah sebelumnya
+            if (step > 1) {
+                const prevStepNum = step > 2 ? step - 1 : 1;
+                if (step === 3) { // Mau ke hal 3, cek hal 2
+                     if(!validateStep(2)) return;
+                } else if (step === 2) { // Mau ke hal 2, cek hal 1
+                     if(!validateStep(1)) return;
+                }
+            }
+            
+            // Pindah Step
+            document.querySelectorAll('.step-content').forEach(s => s.classList.remove('active'));
+            document.getElementById(`step${step}`).classList.add('active');
+            
+            // Update Progress
+            const percent = step === 1 ? 33.33 : step === 2 ? 66.66 : 100;
+            document.getElementById('progressBar').style.width = percent + '%';
+            document.getElementById('stepLabel').innerText = `Halaman ${step} dari 3`;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function validateStep(stepNum) {
+            const currentStepEl = document.getElementById(`step${stepNum}`);
+            const inputs = currentStepEl.querySelectorAll('input[required], select[required], textarea[required]');
+            let valid = true;
+
+            inputs.forEach(input => {
+                if (input.type === 'radio') {
+                    const name = input.getAttribute('name');
+                    if (!currentStepEl.querySelector(`input[name="${name}"]:checked`)) valid = false;
+                } else {
+                    if (!input.value.trim()) valid = false;
+                }
+            });
+
+            if (!valid) alert("Harap isi semua kolom wajib yang bertanda asterisk (*)");
+            return valid;
+        }
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            // Validasi Akhir (Matkul & Rating)
+            const selectedMatkul = document.querySelectorAll('input[name="matkul"]:checked');
+            if(selectedMatkul.length === 0) {
+                alert("Pilih minimal satu mata kuliah!");
+                return;
+            }
+
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = true; 
+            btn.innerText = 'MENGIRIM...';
+
+            // Ambil data
+            const statusFinal = document.getElementById('statusKerja').value === 'Lainnya' ? document.getElementById('statusKerjaLainnya').value : document.getElementById('statusKerja').value;
+            const sektorFinal = document.getElementById('sektor').value === 'Lainnya' ? document.getElementById('sektorLainnya').value : document.getElementById('sektor').value;
+            const matkul = Array.from(selectedMatkul).map(m => m.value).join(', ');
+            const rates = aspek.map((item, idx) => `${item}: ${document.querySelector(`input[name="rate_${idx}"]:checked`).value}`).join(' | ');
+
+            const data = {
+                timestamp: new Date().toLocaleString('id-ID'),
+                email: document.getElementById('email').value,
+                nama: document.getElementById('nama').value,
+                whatsapp: document.getElementById('whatsapp').value,
+                statusKerja: statusFinal,
+                sektor: sektorFinal,
+                matkul: matkul,
+                penilaian: rates
+            };
+
+            // Kirim ke Google Apps Script
+            fetch(scriptURL, { 
+                method: 'POST', 
+                mode: 'no-cors', 
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data) 
+            })
+            .then(() => { 
+                alert('BERHASIL! Terima kasih atas partisipasi Anda.'); 
+                location.reload(); 
+            })
+            .catch(err => { 
+                console.error(err);
+                alert('Gagal mengirim data. Silakan coba lagi.'); 
+                btn.disabled = false; 
+                btn.innerText = 'KIRIM RESPONS';
+            });
+        });
+    </script>
 </body>
 </html>
