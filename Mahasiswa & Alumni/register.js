@@ -1,21 +1,25 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycbwCkeYS8YxZF2xOEFI8BIAVDWEHHxxcT3ea1czqp7qUzhH1Yqv8xwJEEj2Y7Hz_lHC2/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbzNRXDUu9rXEYxCz-BIwGA4m9_EEgRiTrX0WnCd0M_fSHdQFqoImognzmW6_ge09OgJCg/exec";
 
 // Fungsi ganti tema (Dark/Light)
+/*Fungsi ini hanya mengatur tampilan, tidak mempengaruhi data*/
 function toggleTheme() {
     document.body.classList.toggle("dark");
 }
 
 // Fungsi memuat data dari Google Sheets
+/*Mengambil data alumni dari database Menampilkan ke tabe*/
 function loadData() {
     const tableBody = $("#alumniTableBody");
-    tableBody.html('<tr><td colspan="7" class="text-center py-4 text-muted">⏳ Sinkronisasi data alumni...</td></tr>');
+    tableBody.html('<tr><td colspan="7" class="text-center py-4 text-muted">⏳ Sinkronisasi data alumni...</td></tr>');/*Memberi feedback ke user User tahu data sedang diambil*/
     
+    /*Mengirim request GET Parameter action=read menandakan ambil data*/
     $.getJSON(scriptURL + "?action=read")
         .done(function (data) {
             let html = "";
             if (!data || data.length === 0) {
                 html = '<tr><td colspan="7" class="text-center">Database masih kosong.</td></tr>';
             } else {
+                /*Data diproses satu per satu Ditampilkan secara dinamis*/
                 data.forEach((a) => {
                     html += `
                         <tr class="alumni-row">
@@ -31,23 +35,27 @@ function loadData() {
                         </tr>`;
                 });
             }
+            /*Tampilan lebih halus User experience lebih baik*/
             tableBody.hide().html(html).fadeIn(600);
         })
+        /*Menampilkan pesan error Jika database tidak bisa diakses*/
         .fail(function () {
             tableBody.html('<tr><td colspan="7" class="text-danger text-center">❌ Gagal terhubung ke database.</td></tr>');
         });
 }
 
 $(document).ready(function () {
-    // Proses Simpan Data
+    // Proses Simpan Data 
+    /*Menangkap submit form preventDefault() mencegah reload halaman*/
     $("#alumniForm").on("submit", function (e) {
         e.preventDefault();
         const btn = $("#submitBtn");
         const originalBtnText = btn.html();
 
         // Tampilan saat loading
+        /*Mencegah submit ganda Memberi indikator proses*/
         btn.prop("disabled", true).html('<i class="fa-solid fa-circle-notch fa-spin"></i> Memproses...');
-
+/*Data form langsung dikirim ke backend untuk disimpan*/
         $.ajax({
             url: scriptURL,
             type: "POST",
@@ -60,6 +68,7 @@ $(document).ready(function () {
             error: function () {
                 alert("Terjadi kesalahan teknis. Silakan coba lagi nanti.");
             },
+            /*Tombol kembali normal UX tetap rapi*/
             complete: function() {
                 btn.prop("disabled", false).html(originalBtnText);
             }
@@ -67,6 +76,7 @@ $(document).ready(function () {
     });
 
     // Fitur Pencarian Real-time
+    /*Fitur ini mempermudah pencarian data alumni secara real-time*/
     $("#searchInput").on("keyup", function() {
         let keyword = $(this).val().toLowerCase();
         $("#alumniTableBody tr").filter(function() {

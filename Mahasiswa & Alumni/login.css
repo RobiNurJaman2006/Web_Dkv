@@ -67,7 +67,7 @@ body {
   box-shadow: 0 35px 60px rgba(0, 0, 0, 0.4); /*muncul dengan animasi lembut saat halaman dibuka*/
 }
 
-/* ================= LOGO (PAS & PROPORSIONAL) ================= */
+/* ================= LOGO (Flexbox) ================= */
 /*Logo diposisikan posisi tengah*/
 .logo-container {
   display: flex;
@@ -75,8 +75,8 @@ body {
   align-items: center;
   margin-bottom: 20px;
 }
-/*Logo terlihat rapi*/
-Bentuk bulat dan proporsional .logo-img {
+/*Logo terlihat rapi Bentuk bulat*/
+.logo-img {
   width: 80px; /* Ukuran logo pas */
   height: 80px;
   object-fit: contain;
